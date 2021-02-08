@@ -1,0 +1,1 @@
+/home/retoehrensperger/github/dotfiles/.vimrc

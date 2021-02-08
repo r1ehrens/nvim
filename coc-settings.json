@@ -1,0 +1,11 @@
+{
+  "clangd.semanticHighlighting": true,
+  "diagnostic.errorSign": "✘",
+  "diagnostic.infoSign": "ℹ",
+  "diagnostic.hintSign": "➤",
+  "codeLens.enable": true,
+
+  //Java
+  "java.referencesCodeLens.enabled":true,
+  "java.implementationsCodeLens.enabled":true
+  }
