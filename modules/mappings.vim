@@ -9,10 +9,28 @@ map <C-s> :w<CR>
 "map ESC
 cnoremap jj <Esc>
 imap jj <Esc>l
+snoremap jj <esc>l
 
 "map search
 nmap * *N
 nmap - /
+
+"Alt
+nnoremap <M-j> :resize -2<cr>
+nnoremap <M-k> :resize +2<cr>
+nnoremap <M-h> :vertical resize -2<cr>
+nnoremap <M-l> :vertical resize +2<cr>
+
+inoremap <c-u> <esc>viwUi
+nnoremap <c-u> viwU<esc>
+
+nnoremap <tab> :bnext<cr>
+nnoremap <s-tab> :bprevious<cr>
+
+inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+
+vnoremap < <gv
+vnoremap > >gv
 
 "Unbind some useless key bindings
 nmap Q <Nop>
