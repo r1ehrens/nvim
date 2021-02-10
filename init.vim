@@ -1,4 +1,5 @@
 source $HOME/.config/nvim/modules/.vimrc
+
 source $HOME/.config/nvim/modules/colors.vim
 source $HOME/.config/nvim/modules/plugins.vim
 source $HOME/.config/nvim/modules/mappings.vim
