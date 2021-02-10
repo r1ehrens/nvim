@@ -32,4 +32,6 @@ Plug 'junegunn/gv.vim'
 Plug 'skywind3000/asynctasks.vim'
 Plug 'skywind3000/asyncrun.vim'
 Plug 'ryanoasis/vim-devicons'
+Plug 'inside/vim-search-pulse'
+Plug 'tpope/vim-sleuth'
 call plug#end()

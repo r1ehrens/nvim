@@ -1,22 +1,27 @@
 {
-  "clangd.semanticHighlighting": true,
+  //General
   "diagnostic.errorSign": "✘",
   "diagnostic.infoSign": "ℹ",
   "diagnostic.hintSign": "➤",
   "codeLens.enable": true,
+  //c++
+  "clangd.semanticHighlighting": true,
   //Java
   "java.referencesCodeLens.enabled": true,
   "java.implementationsCodeLens.enabled": true,
   //explorer
-  "explorer.width":30,
+  "explorer.width": 30,
   "explorer.icon.enableNerdfont": true,
   "explorer.previewAction.onHover": false,
   "explorer.keyMappings.global": {
-    "<cr>": ["expandable?", "expand","open"],
+    "<cr>": [
+      "expandable?",
+      "expand",
+      "open"
+    ],
     "v": "open:vsplit"
   },
-
   "explorer.git.icon.status.added": "A",
-  "explorer.git.icon.status.modified":"M",
+  "explorer.git.icon.status.modified": "M",
   "explorer.git.icon.status.deleted": "D"
 }

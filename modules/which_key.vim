@@ -83,17 +83,18 @@ let g:which_key_map.b = {
       \ 'n' : ['bnext'                  , 'next-buffer'],
       \ 'p' : ['bprevious'              , 'previous-buffer'],
       \ 'b' : ['Buffers'                , 'fzf-buffer'],
+      \ '!' : [':bd!'                , 'buffer delete!'],
       \ }
 "noremap <silent><leader>bd :bp<cr>:bd #<cr>
 
-   let g:which_key_map.c = {
-         \ 'name' : '+comment' ,
-         \ 'c' : [''  , 'comment line'],
-         \ 'v' : [''   , 'comment visual'],
-         \ 't' : ['gcgc' , 'uncomment adjacent'],
-         \ }
-   nmap <leader>cc gcc
-   vmap <leader>cv gc
+let g:which_key_map.c = {
+     \ 'name' : '+comment' ,
+     \ 'c' : [''  , 'comment line'],
+     \ 'v' : [''   , 'comment visual'],
+     \ 't' : ['gcgc' , 'uncomment adjacent'],
+     \ }
+nmap <leader>cc gcc
+vmap <leader>cv gc
 
 " d is for debug
 let g:which_key_map.d = {

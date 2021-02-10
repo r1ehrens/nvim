@@ -7,14 +7,14 @@ set showcmd
 let mapleader = " "
 set noswapfile
 set list listchars=tab:»·,trail:·,nbsp:·
-set textwidth=80
-set colorcolumn=+1
+"set textwidth=80
+"set colorcolumn=+1
 set ruler
 
 syntax on
 set noerrorbells visualbell t_vb=
 set backspace=indent,eol,start
-set bg=dark ai et sw=2 ts=2
+set ai et sw=2 ts=2
 set scrolloff=7
 set hidden
 set encoding=utf-8
