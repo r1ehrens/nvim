@@ -1,15 +1,19 @@
-set iskeyword+=-
+"set iskeyword+=-
 set formatoptions-=cro
 set nocompatible
-filetype on
+set autoindent
+set expandtab
+set tabstop=4
+set shiftwidth=4
 filetype plugin indent on
 set showcmd
-let mapleader = " "
+let mapleader = "\<space>"
 set noswapfile
 set list listchars=tab:»·,trail:·,nbsp:·
 "set textwidth=80
 "set colorcolumn=+1
 set ruler
+set tags=tags;
 
 syntax on
 set noerrorbells visualbell t_vb=
@@ -46,12 +50,18 @@ set number
 set wildmenu
 
 "Fold
+"will open all folds when opening a buffer
+autocmd BufRead * normal zR
+set foldmethod=indent
 set foldcolumn=1
 "set nofoldenable
 
-"Undo
+" Set up persistent undo across all files.
 set undofile
-set undodir=~/.vimundo/
+if !isdirectory(expand("$HOME/.config/nvim/.undodir"))
+  call mkdir(expand("$HOME/.config/nvim/.undodir"), "p")
+endif
+set undodir=$HOME/.config/nvim/.undodir
 set undolevels=1000
 
 set updatetime=300

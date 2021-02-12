@@ -44,13 +44,12 @@ let g:which_key_map['='] = [ '<C-W>='                                          ,
 let g:which_key_map['e'] = [ ':CocCommand explorer --toggle --sources=file+'   , 'explorer' ]
 let g:which_key_map['j'] = [ '<C-W>s'                                          , 'split below']
 let g:which_key_map['n'] = [ ':let @/ = ""'                                    , 'no highlight' ]
-let g:which_key_map['o'] = [ ':RnvimrToggle'                                   , 'open' ]
+let g:which_key_map['r'] = [ ':RnvimrToggle'                                   , 'ranger' ]
 let g:which_key_map['p'] = [ ':Files'                                          , 'search files' ]
 let g:which_key_map['q'] = [ '<Plug>(coc-fix-current)'                         , 'quickfix' ]
 "let g:which_key_map['T'] = [ ':TSHighlightCapturesUnderCursor'                 , 'treesitter highlight' ]
 let g:which_key_map['u'] = [ ':UndotreeToggle'                                 , 'undo tree']
 let g:which_key_map['v'] = [ '<C-W>v'                                          , 'split right']
-let g:which_key_map['w'] = [ ':call WindowSwap#EasyWindowSwap()'               , 'move window' ]
 "let g:which_key_map['z'] = [ 'Goyo'                                            , 'zen' ]
 
 " Group mappings
@@ -66,16 +65,16 @@ let g:which_key_map.a = {
 " b is for buffer
 let g:which_key_map.b = {
       \ 'name' : '+buffer' ,
-      \ '1' : [':BufferGoto 1'          , 'buffer 1'],
-      \ '2' : [':BufferGoto 2'          , 'buffer 2'],
-      \ '3' : [':BufferGoto 3'          , 'buffer 3'],
-      \ '4' : [':BufferGoto 4'          , 'buffer 4'],
-      \ '5' : [':BufferGoto 5'          , 'buffer 5'],
-      \ '6' : [':BufferGoto 6'          , 'buffer 6'],
-      \ '7' : [':BufferGoto 7'          , 'buffer 7'],
-      \ '8' : [':BufferGoto 8'          , 'buffer 8'],
-      \ '9' : [':BufferGoto 9'          , 'buffer 9'],
-      \ '0' : [':BufferGoto 0'          , 'buffer 0'],
+      \'1' : [':b1'          , 'buffer 1'],
+      \ '2' : [':b2'          , 'buffer 2'],
+      \ '3' : [':b3'          , 'buffer 3'],
+      \ '4' : [':b4'          , 'buffer 4'],
+      \ '5' : [':b5'          , 'buffer 5'],
+      \ '6' : [':b6'          , 'buffer 6'],
+      \ '7' : [':b7'          , 'buffer 7'],
+      \ '8' : [':b8'          , 'buffer 8'],
+      \ '9' : [':b9'          , 'buffer 9'],
+      \ '0' : [':b0'          , 'buffer 0'],
       \ 'd' : [':bd', 'buffer delete'],
       \ 'D' : [':BufferOrderByDirectory', 'order by directory'],
       \ 'f' : ['bfirst'                 , 'first-buffer'],
@@ -178,13 +177,13 @@ let g:which_key_map.g = {
       \ 'd' : [':Git diff'                         , 'diff'],
       \ 'D' : [':Gdiffsplit'                       , 'diff split'],
       \ 'g' : [':GGrep'                            , 'git grep'],
-      \ 'G' : [':Gstatus'                          , 'status'],
-      \ 'i' : [':Gist -b'                          , 'post gist'],
       \ 'l' : [':Git log'                          , 'log'],
+      \ 'L' : [':Glog'                          , 'log verbose'],
       \ 'p' : [':Git push'                         , 'push'],
       \ 'P' : [':Git pull'                         , 'pull'],
       \ 'r' : [':GRemove'                          , 'remove'],
-      \ 'S' : [':CocCommand fzf-preview.GitStatus' , 'status'],
+      \ 's' : [':Gstatus'                          , 'status'],
+      \ 'S' : [':CocCommand fzf-preview.GitStatus' , 'status preview'],
       \ 'v' : [':GV'                               , 'view commits'],
       \ 'V' : [':GV!'                              , 'view buffer commits'],
       \ }
@@ -225,5 +224,17 @@ let g:which_key_map.t = {
       \ 't' : [':FloatermToggle'                                , 'toggle'],
       \ }
 
+let g:which_key_map['w'] = {
+      \ 'name' : '+windows' ,
+      \ 'w' : ['<C-W>w'     , 'other']          ,
+      \ 'd' : ['<C-W>c'     , 'delete']         ,
+      \ 'j' : ['<C-W>J'     , 'move down']    ,
+      \ 'k' : ['<C-W>K'     , 'move up']    ,
+      \ 'h' : ['<C-W>H'     , 'move left']    ,
+      \ 'l' : ['<C-W>L'     , 'move right']    ,
+      \ '=' : ['<C-W>='     , 'balance']        ,
+      \ 'o' : ['<C-W>o'     , 'only']        ,
+      \ 's' : [':call WindowSwap#EasyWindowSwap()'     , 'swap']        ,
+      \ }
 " Register which key map
 call which_key#register('<Space>', "g:which_key_map")

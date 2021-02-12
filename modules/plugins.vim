@@ -33,5 +33,6 @@ Plug 'skywind3000/asynctasks.vim'
 Plug 'skywind3000/asyncrun.vim'
 Plug 'ryanoasis/vim-devicons'
 Plug 'inside/vim-search-pulse'
-Plug 'tpope/vim-sleuth'
+"Plug 'tpope/vim-sleuth'
+Plug 'easymotion/vim-easymotion'
 call plug#end()
