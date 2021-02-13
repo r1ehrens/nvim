@@ -1,64 +1,96 @@
+" adds a letter to a "word"
 "set iskeyword+=-
-set formatoptions-=cro
+
+" load plugin file(ftplugin directory), load indent file and turn on filetype
+" detection
+filetype plugin indent on
+
+" Should prevent ato commenting when pressing 'o' or '<cr>' in insert mode.
+" Does not work since formatoptions is later set again
+" see verb set fo
+"set formatoptions-=cro
+
 set nocompatible
+
+" automatic indent when pressing '<cr>' or 'o'
 set autoindent
+
+" add spaces instead of tab
 set expandtab
+
+" tab counts as 4 spaces
 set tabstop=4
 set shiftwidth=4
-filetype plugin indent on
+
+" show command in last line of screen
 set showcmd
 let mapleader = "\<space>"
+
+" do not generate any swapfiles
 set noswapfile
+"
+"display tabs and trailing whitespaces
 set list listchars=tab:»·,trail:·,nbsp:·
-"set textwidth=80
-"set colorcolumn=+1
-set ruler
-set tags=tags;
+
+" set textwidth=80
+" set colorcolumn=+1
+
 " searches don't go over EOF
 set nowrapscan
 
+" enable syntax highlighting
 syntax on
 set noerrorbells visualbell t_vb=
+
+" allow to backspace to line before
 set backspace=indent,eol,start
-set ai et sw=2 ts=2
+
+" always 7 lines away from end of screen
 set scrolloff=7
+
+" allow to move away from unsaved buffer
 set hidden
 set encoding=utf-8
 set fileencoding=utf-8
+
 set splitbelow
 set splitright
 set clipboard=unnamedplus
-set cursorline
-set showtabline=2
-set noshowmode
 
-"Default to not read-only in vimdiff
+" display cursorline
+set cursorline
+
+" always display tab
+set showtabline=2
+
+" Default to not read-only in vimdiff
 set diffopt+=vertical
 set noro
 
-"Search settings
-set hlsearch
-set incsearch
-set ignorecase smartcase
+" smartcase = when typing uppercase, find uppercase
+set hlsearch incsearch ignorecase smartcase
 
-"History
+" History
 set history=1000
 
-"Number
+" Number
 set number
 "set relativenumber
 
-"Menu
+" Menu
 set wildmenu
 
-"Fold
-"will open all folds when opening a buffer
+" Fold
+" will open all folds when opening a buffer
 autocmd BufRead * normal zR
+" fold everything that is indent
 set foldmethod=indent
+" give space for fold display
 set foldcolumn=1
 "set nofoldenable
 
 " Set up persistent undo across all files.
+" create undodir if not already exist
 set undofile
 if !isdirectory(expand("$HOME/.config/nvim/.undodir"))
   call mkdir(expand("$HOME/.config/nvim/.undodir"), "p")
@@ -67,12 +99,18 @@ set undodir=$HOME/.config/nvim/.undodir
 set undolevels=1000
 
 set updatetime=300
+" time to be able to type an additional key
 set timeoutlen=500
+" <esc> delay
 set ttimeoutlen=0
 
+" would create a backup-file everytime a file is overwritten
 set nobackup
 set nowritebackup
+" 2 lines for command
 set cmdheight=2
+
+" don't give completion messages
 set shortmess+=c
 
 "Enables to search with '*' for visual selected, not just for word under

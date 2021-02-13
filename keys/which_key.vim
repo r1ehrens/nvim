@@ -47,7 +47,7 @@ let g:which_key_map['r'] = [ ':RnvimrToggle'                                   ,
 let g:which_key_map['p'] = [ ':Files'                                          , 'search files' ]
 "let g:which_key_map['T'] = [ ':TSHighlightCapturesUnderCursor'                 , 'treesitter highlight' ]
 let g:which_key_map['u'] = [ ':UndotreeToggle'                                 , 'undo tree']
-"let g:which_key_map['z'] = [ 'Goyo'                                            , 'zen' ]
+let g:which_key_map['z'] = [ 'Goyo'                                            , 'zen' ]
 
 " Group mappings
 

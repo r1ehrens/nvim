@@ -5,36 +5,84 @@ if empty(glob('~/.config/nvim/autoload/plug.vim'))
 endif
 
 call plug#begin('~/.config/nvim/plugs')
+" Themes
 Plug 'morhetz/gruvbox'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-
-Plug 'liuchengxu/vim-which-key'
-Plug 'tpope/vim-commentary'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
+" C++ syntax highlighting
 Plug 'jackguo380/vim-lsp-cxx-highlight'
+" nice icons
+Plug 'ryanoasis/vim-devicons'
+
+" display <leader> mappings
+Plug 'liuchengxu/vim-which-key'
+
+" easy commentary
+Plug 'tpope/vim-commentary'
+
+" auto completion and much more
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
+" find files
 Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
+
+" working directory is start of project
 Plug 'airblade/vim-rooter'
+
+" vim startpage
 Plug 'mhinz/vim-startify'
+
+" snippets
 Plug 'honza/vim-snippets'
+
+" ranger for vim
 Plug 'kevinhwang91/rnvimr', {'do': 'make sync'}
+
+" displays undotree
 Plug 'mbbill/undotree'
+
+" able to swap desired windows
 Plug 'wesQ3/vim-windowswap'
+
+" live markdown preview in firefox
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
+
+" navigation and text manipulation
 Plug 'tpope/vim-surround'
+Plug 'easymotion/vim-easymotion'
+
+" floating window
 Plug 'voldikss/vim-floaterm'
+
+" interactive refactoring
 Plug 'brooth/far.vim'
+
+" Git
+" displays git status for each line
 Plug 'mhinz/vim-signify'
+
+" Git in vim
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-rhubarb'
 Plug 'junegunn/gv.vim'
+
+" compile and build in vim
 Plug 'skywind3000/asynctasks.vim'
 Plug 'skywind3000/asyncrun.vim'
-Plug 'ryanoasis/vim-devicons'
+
+" pulse when entry found
 Plug 'inside/vim-search-pulse'
-"Plug 'tpope/vim-sleuth'
-Plug 'easymotion/vim-easymotion'
+
+" better tmux integration
 Plug 'christoomey/vim-tmux-navigator'
+
+" testing in vim
 Plug 'janko-m/vim-test'
+
+" distraction-free writing
+Plug 'junegunn/goyo.vim'
+
+" allows to repeat plugin mappings with '.'
+Plug 'tpope/vim-repeat'
 call plug#end()
