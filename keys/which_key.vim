@@ -36,45 +36,31 @@ autocmd! FileType which_key
 autocmd  FileType which_key set laststatus=0 noshowmode noruler
   \| autocmd BufLeave <buffer> set laststatus=2 noshowmode ruler
 
+
 "Single mappings
-let g:which_key_map['/'] = [ ':Commentary'                                 , 'comment' ]
 let g:which_key_map['.'] = [ ':e $MYVIMRC'                                     , 'open init' ]
 let g:which_key_map[';'] = [ ':Commands'                                       , 'commands' ]
 let g:which_key_map['='] = [ '<C-W>='                                          , 'balance windows' ]
 let g:which_key_map['e'] = [ ':CocCommand explorer --toggle --sources=file+'   , 'explorer' ]
-let g:which_key_map['j'] = [ '<C-W>s'                                          , 'split below']
 let g:which_key_map['n'] = [ ':let @/ = ""'                                    , 'no highlight' ]
 let g:which_key_map['r'] = [ ':RnvimrToggle'                                   , 'ranger' ]
 let g:which_key_map['p'] = [ ':Files'                                          , 'search files' ]
-let g:which_key_map['q'] = [ '<Plug>(coc-fix-current)'                         , 'quickfix' ]
 "let g:which_key_map['T'] = [ ':TSHighlightCapturesUnderCursor'                 , 'treesitter highlight' ]
 let g:which_key_map['u'] = [ ':UndotreeToggle'                                 , 'undo tree']
-let g:which_key_map['v'] = [ '<C-W>v'                                          , 'split right']
 "let g:which_key_map['z'] = [ 'Goyo'                                            , 'zen' ]
 
 " Group mappings
 
 " a is for actions
-let g:which_key_map.a = {
+let g:which_key_map['a'] = {
       \ 'name' : '+actions' ,
       \ 'm' : [':MarkdownPreview'        , 'markdown preview'],
       \ 'M' : [':MarkdownPreviewStop'    , 'markdown preview stop'],
-      \ 't' : [':FloatermToggle'         , 'terminal'],
       \ }
 
 " b is for buffer
-let g:which_key_map.b = {
+let g:which_key_map['b'] = {
       \ 'name' : '+buffer' ,
-      \'1' : [':b1'          , 'buffer 1'],
-      \ '2' : [':b2'          , 'buffer 2'],
-      \ '3' : [':b3'          , 'buffer 3'],
-      \ '4' : [':b4'          , 'buffer 4'],
-      \ '5' : [':b5'          , 'buffer 5'],
-      \ '6' : [':b6'          , 'buffer 6'],
-      \ '7' : [':b7'          , 'buffer 7'],
-      \ '8' : [':b8'          , 'buffer 8'],
-      \ '9' : [':b9'          , 'buffer 9'],
-      \ '0' : [':b0'          , 'buffer 0'],
       \ 'd' : [':bd', 'buffer delete'],
       \ 'D' : [':BufferOrderByDirectory', 'order by directory'],
       \ 'f' : ['bfirst'                 , 'first-buffer'],
@@ -86,7 +72,7 @@ let g:which_key_map.b = {
       \ }
 "noremap <silent><leader>bd :bp<cr>:bd #<cr>
 
-let g:which_key_map.c = {
+let g:which_key_map['c'] = {
      \ 'name' : '+comment' ,
      \ 'c' : [''  , 'comment line'],
      \ 'v' : [''   , 'comment visual'],
@@ -96,7 +82,7 @@ nmap <leader>cc gcc
 vmap <leader>cv gc
 
 " d is for debug
-let g:which_key_map.d = {
+let g:which_key_map['d'] = {
       \ 'name' : '+debug' ,
       \ 'b' : ['<Plug>VimspectorToggleBreakpoint'              , 'breakpoint'],
       \ 'B' : ['<Plug>VimspectorToggleConditionalBreakpoint'   , 'conditional breakpoint'],
@@ -113,14 +99,14 @@ let g:which_key_map.d = {
       \ }
 
 " f is for find and replace
-let g:which_key_map.f = {
+let g:which_key_map['f'] = {
       \ 'name' : '+find & replace' ,
       \ 'f' : [':Farr --source=vimgrep'    , 'file'],
       \ 'p' : [':Farr --source=rgnvim'     , 'project'],
       \ }
 
 " k is for task
-let g:which_key_map.k = {
+let g:which_key_map['k'] = {
       \ 'name' : '+task' ,
       \ 'c' : [':AsyncTask file-compile'      , 'compile file'],
       \ 'b' : [':AsyncTask project-build'     , 'build project'],
@@ -137,7 +123,7 @@ let g:which_key_map.k = {
       \ }
 
 " s is for search
-let g:which_key_map.s = {
+let g:which_key_map["s"] = {
       \ 'name' : '+search' ,
       \ 'b' : [':CocCommand fzf-preview.Buffers'               , 'open buffers'],
       \ 'c' : [':Commits'               , 'commits'],
@@ -158,7 +144,7 @@ let g:which_key_map.s = {
       \ }
 " 
 
-let g:which_key_map.S = {
+let g:which_key_map['S'] = {
       \ 'name' : '+Session' ,
       \ 'c' : [':SClose'          , 'Close Session']  ,
       \ 'd' : [':SDelete'         , 'Delete Session'] ,
@@ -168,7 +154,7 @@ let g:which_key_map.S = {
       \ }
 
 " g is for git
-let g:which_key_map.g = {
+let g:which_key_map['g'] = {
       \ 'name' : '+git' ,
       \ 'a' : [':Git add %'                        , 'add current'],
       \ 'b' : [':Git blame'                        , 'blame'],
@@ -189,7 +175,7 @@ let g:which_key_map.g = {
       \ }
 
 " l is for language server protocol
-let g:which_key_map.l = {
+let g:which_key_map['l'] = {
       \ 'name' : '+lsp' ,
       \ '.' : [':CocConfig'                          , 'config'],
       \ 'a' : ['<Plug>(coc-codeaction)'              , 'code action'],
@@ -207,7 +193,7 @@ let g:which_key_map.l = {
       \ 'P' : ['<Plug>(coc-diagnostic-prev-error)'   , 'prev error'],
       \ 'r' : ['<Plug>(coc-references)'              , 'references'],
       \ 'R' : ['<Plug>(coc-rename)'                  , 'rename'],
-      \ 's' : [':CocList -I symbols'                 , 'references'],
+      \ 's' : ['<Plug>(coc-refactor)'                 , 'refactor'],
       \ 'S' : [':CocList snippets'                   , 'snippets'],
       \ 'u' : [':CocListResume'                      , 'resume list'],
       \ 'U' : [':CocUpdate'                          , 'update CoC'],
@@ -216,13 +202,27 @@ let g:which_key_map.l = {
       \ }
 
 " t is for terminal
-let g:which_key_map.t = {
+let g:which_key_map['t'] = {
       \ 'name' : '+terminal' ,
-      \ ';' : [':FloatermNew --wintype=normal --height=6'        , 'terminal'],
-      \ 'd' : [':FloatermNew lazydocker'                        , 'docker'],
-      \ 'n' : [':FloatermNew node'                              , 'node'],
-      \ 't' : [':FloatermToggle'                                , 'toggle'],
+      \ 't' : [':split | term'         , 'terminal'],
       \ }
+      "\ 'd' : [':FloatermNew lazydocker'                        , 'docker'],
+      "\ 'd' : [':FloatermNew lazygit'                        , 'docker'],
+
+let g:which_key_map['v'] = {
+      \ 'name' : '+vimdiff' ,
+      \ 'u' : [':diffupdate'     , 'update']    ,
+      \ 'o' : [':diffoff'     , 'off']    ,
+      \ 't' : [':diffthis'     , 'this']    ,
+      \ 'c' : [':Gw!'     , 'commit this']    ,
+      \ 'r' : [':diffget REMOTE'     , 'get REMOTE']    ,
+      \ 'b' : [':diffget BASE'     , 'get BASE']    ,
+      \ 'l' : [':diffget LOCAL'     , 'get LOCAL']    ,
+      \ }
+      "\ 'p' : [':diffput'     , 'put']          ,
+      "\ 'g' : [':diffget'     , 'get']         ,
+nnoremap <leader>vp :diffput<space>
+nnoremap <leader>vg :diffget<space>
 
 let g:which_key_map['w'] = {
       \ 'name' : '+windows' ,
@@ -234,7 +234,15 @@ let g:which_key_map['w'] = {
       \ 'l' : ['<C-W>L'     , 'move right']    ,
       \ '=' : ['<C-W>='     , 'balance']        ,
       \ 'o' : ['<C-W>o'     , 'only']        ,
-      \ 's' : [':call WindowSwap#EasyWindowSwap()'     , 'swap']        ,
+      \ 's' : ['<C-W>s'     , 'split horizontal']        ,
+      \ 'v' : ['<C-W>v'     , 'split vertical']        ,
+      \ 'q' : [':copen'     , 'quickfix']        ,
+      \ 'S' : [':call WindowSwap#EasyWindowSwap()'     , 'swap']        ,
       \ }
+"ignoring keys
+"
+let g:which_key_map['q'] = 'which_key_ignore'
+
+
 " Register which key map
 call which_key#register('<Space>', "g:which_key_map")

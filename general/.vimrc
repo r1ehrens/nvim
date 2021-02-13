@@ -14,6 +14,8 @@ set list listchars=tab:»·,trail:·,nbsp:·
 "set colorcolumn=+1
 set ruler
 set tags=tags;
+" searches don't go over EOF
+set nowrapscan
 
 syntax on
 set noerrorbells visualbell t_vb=
@@ -66,6 +68,7 @@ set undolevels=1000
 
 set updatetime=300
 set timeoutlen=500
+set ttimeoutlen=0
 
 set nobackup
 set nowritebackup

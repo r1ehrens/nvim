@@ -1,18 +1,69 @@
 {
-  //General
-  "diagnostic.errorSign": "✘",
-  "diagnostic.infoSign": "ℹ",
-  "diagnostic.hintSign": "➤",
+
+  // TODO add more labels and give them cool glyphs
+  "suggest.completionItemKindLabels": {
+    "text": "t",
+    "method": "m",
+    "function": "",
+    "constructor": "",
+    "field": "f",
+    "variable": "",
+    "class": "",
+    "interface": "ﰮ",
+    "module": "",
+    "property": "",
+    "unit": "",
+    "value": "",
+    "enum": "了",
+    "keyword": "",
+    "snippet": "﬌",
+    "color": "",
+    "file": "",
+    "reference": "ref",
+    "folder": "'",
+    "enumMember": "",
+    "constant": "'",
+    "struct": "",
+    "event": "event",
+    "operator": "op",
+    "typeParameter": "tp"
+  },
+  "snippets.priority": 1,
+  "suggest.languageSourcePriority": 99,
+  "coc.source.file.priority": 2,
+  "coc.source.around.priority": 3,
+  "coc.source.buffer.priority": 4,
+
+  // General
+  "diagnostic.errorSign": " ",
+  "diagnostic.warningSign": " ",
+  "diagnostic.infoSign": "",
+  "diagnostic.hintSign": " ",
+
+  // codelens
   "codeLens.enable": true,
-  //c++
+
+  // snippets
+  "snippets.ultisnips.directories": ["UltiSnips", "~/.config/nvim/snips"],
+
+  // list
+  "list.indicator": ">",
+  "list.selectedSignText": " ",
+  // c++
   "clangd.semanticHighlighting": true,
-  //Java
+
+  // Java
   "java.referencesCodeLens.enabled": true,
   "java.implementationsCodeLens.enabled": true,
-  //explorer
+  "java.completion.enabled": true,
+
+  // explorer
   "explorer.width": 30,
+  "explorer.file.root.template": "[icon] [git] [hidden & 1][root]",
   "explorer.icon.enableNerdfont": true,
   "explorer.previewAction.onHover": false,
+  "explorer.icon.enableVimDevicons": false,
+  "explorer.file.showHiddenFiles": false,
   "explorer.keyMappings.global": {
     "<cr>": [
       "expandable?",

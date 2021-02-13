@@ -35,4 +35,6 @@ Plug 'ryanoasis/vim-devicons'
 Plug 'inside/vim-search-pulse'
 "Plug 'tpope/vim-sleuth'
 Plug 'easymotion/vim-easymotion'
+Plug 'christoomey/vim-tmux-navigator'
+Plug 'janko-m/vim-test'
 call plug#end()
