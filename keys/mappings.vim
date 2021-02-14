@@ -88,6 +88,10 @@ nmap <silent> gr <Plug>(coc-references)
 " Use K to show documentation in preview window
 nnoremap <silent> K :call <SID>show_documentation()<CR>
 
+" Easymotion mappings
+map , <Plug>(easymotion-prefix)
+
+
 "Unbind some useless key bindings
 nmap Q <nop>
 noremap <up> <nop>
