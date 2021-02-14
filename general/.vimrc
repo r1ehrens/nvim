@@ -1,4 +1,12 @@
-" adds a letter to a "word"
+"      (_)
+"__   ___ _ __ ___  _ __ ___ 
+"\ \ / / | '_ ` _ \| '__/ __|
+ "\ V /| | | | | | | | | (__ 
+"(_)_/ |_|_| |_| |_|_|  \___|
+
+
+
+" adds a letter to a 'word'
 "set iskeyword+=-
 
 " load plugin file(ftplugin directory), load indent file and turn on filetype
