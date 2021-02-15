@@ -44,6 +44,7 @@ nnoremap <leader>q :q<cr>
 cnoremap jj <esc>
 inoremap jj <esc>l
 snoremap jj <esc>l
+tnoremap jj <c-\><c-n>
 tnoremap <esc> <c-\><c-n>
 
 " map search

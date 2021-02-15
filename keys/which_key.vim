@@ -101,8 +101,29 @@ let g:which_key_map['d'] = {
 " f is for find and replace
 let g:which_key_map['f'] = {
       \ 'name' : '+find & replace' ,
-      \ 'f' : [':Farr --source=vimgrep'    , 'file'],
-      \ 'p' : [':Farr --source=rgnvim'     , 'project'],
+      \ 'r' : [':Farr --source=rgnvim'     , 'replace'],
+      \ }
+      "\ 'f' : [':Farr --source=vimgrep'    , 'file'],
+
+" g is for git
+let g:which_key_map['g'] = {
+      \ 'name' : '+git' ,
+      \ 'a' : [':Git add %'                        , 'add current'],
+      \ 'b' : [':Git blame'                        , 'blame'],
+      \ 'B' : [':GBrowse'                          , 'browse'],
+      \ 'c' : [':Git commit'                       , 'commit'],
+      \ 'd' : [':Git diff'                         , 'diff'],
+      \ 'D' : [':Gdiffsplit'                       , 'diff split'],
+      \ 'g' : [':GGrep'                            , 'git grep'],
+      \ 'l' : [':Git log'                          , 'log'],
+      \ 'L' : [':Glog'                          , 'log verbose'],
+      \ 'p' : [':Git push'                         , 'push'],
+      \ 'P' : [':Git pull'                         , 'pull'],
+      \ 'r' : [':GRemove'                          , 'remove'],
+      \ 's' : [':Gstatus'                          , 'status'],
+      \ 'S' : [':CocCommand fzf-preview.GitStatus' , 'status preview'],
+      \ 'v' : [':GV'                               , 'view commits'],
+      \ 'V' : [':GV!'                              , 'view buffer commits'],
       \ }
 
 " k is for task
@@ -120,6 +141,33 @@ let g:which_key_map['k'] = {
       \ 'r' : [':AsyncTask file-run'          , 'run file'],
       \ 'p' : [':AsyncTask project-run'       , 'run project'],
       \ 'x' : [':cclose'                      , 'close task view'],
+      \ }
+
+" l is for language server protocol
+let g:which_key_map['l'] = {
+      \ 'name' : '+lsp' ,
+      \ '.' : [':CocConfig'                          , 'config'],
+      \ 'a' : ['<Plug>(coc-codeaction)'              , 'code action'],
+      \ 'A' : ['<Plug>(coc-codeaction-selected)'     , 'selected action'],
+      \ 'c' : [':CocList commands'                   , 'commands'],
+      \ 'd' : ['<Plug>(coc-definition)'              , 'definition'],
+      \ 'D' : ['<Plug>(coc-declaration)'             , 'declaration'],
+      \ 'f' : ['<Plug>(coc-format-selected)'         , 'format selected'],
+      \ 'F' : ['<Plug>(coc-format)'                  , 'format'],
+      \ 'I' : [':CocList diagnostics'                , 'diagnostics'],
+      \ 'n' : ['<Plug>(coc-diagnostic-next)'         , 'next diagnostic'],
+      \ 'N' : ['<Plug>(coc-diagnostic-next-error)'   , 'next error'],
+      \ 'o' : [':CocList outline'                    , 'search outline'],
+      \ 'p' : ['<Plug>(coc-diagnostic-prev)'         , 'prev diagnostic'],
+      \ 'P' : ['<Plug>(coc-diagnostic-prev-error)'   , 'prev error'],
+      \ 'r' : ['<Plug>(coc-references)'              , 'references'],
+      \ 'R' : ['<Plug>(coc-rename)'                  , 'rename'],
+      \ 's' : ['<Plug>(coc-refactor)'                 , 'refactor'],
+      \ 'S' : [':CocList snippets'                   , 'snippets'],
+      \ 'u' : [':CocListResume'                      , 'resume list'],
+      \ 'U' : [':CocUpdate'                          , 'update CoC'],
+      \ 'z' : [':CocDisable'                         , 'disable CoC'],
+      \ 'Z' : [':CocEnable'                          , 'enable CoC'],
       \ }
 
 " s is for search
@@ -153,53 +201,7 @@ let g:which_key_map['S'] = {
       \ 'S' : [':SSave'           , 'Save Session']   ,
       \ }
 
-" g is for git
-let g:which_key_map['g'] = {
-      \ 'name' : '+git' ,
-      \ 'a' : [':Git add %'                        , 'add current'],
-      \ 'b' : [':Git blame'                        , 'blame'],
-      \ 'B' : [':GBrowse'                          , 'browse'],
-      \ 'c' : [':Git commit'                       , 'commit'],
-      \ 'd' : [':Git diff'                         , 'diff'],
-      \ 'D' : [':Gdiffsplit'                       , 'diff split'],
-      \ 'g' : [':GGrep'                            , 'git grep'],
-      \ 'l' : [':Git log'                          , 'log'],
-      \ 'L' : [':Glog'                          , 'log verbose'],
-      \ 'p' : [':Git push'                         , 'push'],
-      \ 'P' : [':Git pull'                         , 'pull'],
-      \ 'r' : [':GRemove'                          , 'remove'],
-      \ 's' : [':Gstatus'                          , 'status'],
-      \ 'S' : [':CocCommand fzf-preview.GitStatus' , 'status preview'],
-      \ 'v' : [':GV'                               , 'view commits'],
-      \ 'V' : [':GV!'                              , 'view buffer commits'],
-      \ }
 
-" l is for language server protocol
-let g:which_key_map['l'] = {
-      \ 'name' : '+lsp' ,
-      \ '.' : [':CocConfig'                          , 'config'],
-      \ 'a' : ['<Plug>(coc-codeaction)'              , 'code action'],
-      \ 'A' : ['<Plug>(coc-codeaction-selected)'     , 'selected action'],
-      \ 'c' : [':CocList commands'                   , 'commands'],
-      \ 'd' : ['<Plug>(coc-definition)'              , 'definition'],
-      \ 'D' : ['<Plug>(coc-declaration)'             , 'declaration'],
-      \ 'f' : ['<Plug>(coc-format-selected)'         , 'format selected'],
-      \ 'F' : ['<Plug>(coc-format)'                  , 'format'],
-      \ 'I' : [':CocList diagnostics'                , 'diagnostics'],
-      \ 'n' : ['<Plug>(coc-diagnostic-next)'         , 'next diagnostic'],
-      \ 'N' : ['<Plug>(coc-diagnostic-next-error)'   , 'next error'],
-      \ 'o' : [':CocList outline'                    , 'search outline'],
-      \ 'p' : ['<Plug>(coc-diagnostic-prev)'         , 'prev diagnostic'],
-      \ 'P' : ['<Plug>(coc-diagnostic-prev-error)'   , 'prev error'],
-      \ 'r' : ['<Plug>(coc-references)'              , 'references'],
-      \ 'R' : ['<Plug>(coc-rename)'                  , 'rename'],
-      \ 's' : ['<Plug>(coc-refactor)'                 , 'refactor'],
-      \ 'S' : [':CocList snippets'                   , 'snippets'],
-      \ 'u' : [':CocListResume'                      , 'resume list'],
-      \ 'U' : [':CocUpdate'                          , 'update CoC'],
-      \ 'z' : [':CocDisable'                         , 'disable CoC'],
-      \ 'Z' : [':CocEnable'                          , 'enable CoC'],
-      \ }
 
 " t is for terminal
 let g:which_key_map['t'] = {
