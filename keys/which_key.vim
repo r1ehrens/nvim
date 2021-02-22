@@ -129,11 +129,11 @@ let g:which_key_map['g'] = {
 " k is for task
 let g:which_key_map['k'] = {
       \ 'name' : '+task' ,
+      \ '.' : [':AsyncTaskEdit!'               , 'config'],
       \ 'c' : [':AsyncTask file-compile'      , 'compile file'],
       \ 'b' : [':AsyncTask project-build'     , 'build project'],
-      \ 'e' : [':AsyncTaskEdit'               , 'edit local tasks'],
       \ 'f' : [':AsyncTaskFzf'                , 'find task'],
-      \ 'g' : [':AsyncTaskEdit!'              , 'edit global tasks'],
+      \ 'e' : [':AsyncTaskEdit'              , 'edit local tasks'],
       \ 'h' : [':AsyncTaskList!'              , 'list hidden tasks'],
       \ 'l' : [':CocList tasks'               , 'list tasks'],
       \ 'm' : [':AsyncTaskMacro'              , 'macro help'],
@@ -177,7 +177,7 @@ let g:which_key_map["s"] = {
       \ 'c' : [':Commits'               , 'commits'],
       \ 'C' : [':BCommits'              , 'buffer commits'],
       \ 'd' : [':CocCommand fzf-preview.DirectoryFiles'              , 'hidden files'],
-      \ 'f' : [':CocCommand fzf-preview.ProjectFiles'                 , 'files'],
+      \ 'f' : [':Files'                 , 'files'],
       \ 'g' : [':CocCommand fzf-preview.GitFiles'                , 'git files'],
       \ 'G' : [':GFiles?'               , 'modified git files'],
       \ 'h' : [':History:'              , 'command history'],
@@ -190,7 +190,7 @@ let g:which_key_map["s"] = {
       \ 'S' : [':Colors'                , 'color schemes'],
       \ 'z' : [':FZF --reverse $HOME'                , 'FZF home'],
       \ }
-" 
+      "\ 'f' : [':CocCommand fzf-preview.ProjectFiles'                 , 'files'],
 
 let g:which_key_map['S'] = {
       \ 'name' : '+Session' ,
@@ -241,6 +241,17 @@ let g:which_key_map['w'] = {
       \ 'q' : [':copen'     , 'quickfix']        ,
       \ 'S' : [':call WindowSwap#EasyWindowSwap()'     , 'swap']        ,
       \ }
+
+
+let g:which_key_map['x'] = {
+      \ 'name' : '+latex' ,
+      \ 'c' : [':VimtexCompile'     , 'compile']          ,
+      \ 'v' : [':VimtexView'     , 'view']         ,
+      \ 't' : [':VimtexTocToggle'     , 'toggle toc']         ,
+      \ 'i' : [':VimtexInfo'     , 'info project']         ,
+      \ 's' : [':VimtexStop'     , 'stop compiling']         ,
+      \ }
+
 "ignoring keys
 "
 let g:which_key_map['q'] = 'which_key_ignore'

@@ -26,9 +26,13 @@ set autoindent
 " add spaces instead of tab
 set expandtab
 
-" tab counts as 4 spaces
-set tabstop=4
-set shiftwidth=4
+" tab counts as 2 spaces
+set tabstop=2
+set shiftwidth=2
+set shiftround
+
+" Use one space, not two, after punctuation in command
+set nojoinspaces
 
 " show command in last line of screen
 set showcmd
@@ -40,11 +44,15 @@ set noswapfile
 "display tabs and trailing whitespaces
 set list listchars=tab:»·,trail:·,nbsp:·
 
-" set textwidth=80
-" set colorcolumn=+1
+set textwidth=80
+set colorcolumn=+1
 
 " searches don't go over EOF
-set nowrapscan
+"set nowrapscan
+
+" don't show checked after a command
+set modelines=0
+set nomodeline
 
 " enable syntax highlighting
 syntax on
@@ -71,31 +79,33 @@ set cursorline
 " always display tab
 set showtabline=2
 
-" Default to not read-only in vimdiff
+" Always use vertical diff
 set diffopt+=vertical
+" Default to not read-only in vimdiff
 set noro
 
 " smartcase = when typing uppercase, find uppercase
 set hlsearch incsearch ignorecase smartcase
 
 " History
-set history=1000
+set history=50
 
 " Number
 set number
+set numberwidth=5
 "set relativenumber
 
 " Menu
 set wildmenu
 
-" Fold
+" Fold unfortunatly has a lot of problems with plugins
 " will open all folds when opening a buffer
-autocmd BufRead * normal zR
+"autocmd BufRead * normal zR
 " fold everything that is indent
-set foldmethod=indent
+"set foldmethod=indent
 " give space for fold display
-set foldcolumn=1
-"set nofoldenable
+"set foldcolumn=1
+set nofoldenable
 
 " Set up persistent undo across all files.
 " create undodir if not already exist
@@ -132,3 +142,11 @@ function! s:VSetSearch(cmdtype)
   let @/ = '\V' . substitute(escape(@s, a:cmdtype.'\'), '\n', '\\n', 'g')
   let @s = temp
 endfunction
+
+" When editing a file, always jump to the last known cursor position.
+" Don't do it for commit messages, when the position is invalid, or when
+" inside an event handler (happens when dropping a file on gvim).
+autocmd BufReadPost *
+    \ if &ft != 'gitcommit' && line("'\"") > 0 && line("'\"") <= line("$") |
+    \   exe "normal g`\"" |
+    \ endif

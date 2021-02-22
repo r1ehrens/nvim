@@ -34,6 +34,7 @@ Plug 'airblade/vim-rooter'
 Plug 'mhinz/vim-startify'
 
 " snippets
+Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 
 " ranger for vim
@@ -85,4 +86,12 @@ Plug 'junegunn/goyo.vim'
 
 " allows to repeat plugin mappings with '.'
 Plug 'tpope/vim-repeat'
+
+" A Vim Plugin for Lively Previewing LaTeX PDF Output
+Plug 'xuhdev/vim-latex-live-preview', { 'for': 'tex' }
+Plug 'lervag/vimtex'
+
+" requires nvim 0.5
+
+"Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 call plug#end()

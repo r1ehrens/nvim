@@ -45,7 +45,8 @@ cnoremap jj <esc>
 inoremap jj <esc>l
 snoremap jj <esc>l
 tnoremap jj <c-\><c-n>
-tnoremap <esc> <c-\><c-n>
+" cannot be used since ranger is also in a terminal!
+"tnoremap <esc> <c-\><c-n>
 
 " map search
 nnoremap * *N
@@ -82,8 +83,6 @@ nnoremap > >>
 inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 
 nmap <silent> gd <Plug>(coc-definition)
-nmap <silent> gy <Plug>(coc-type-definition)
-nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
 
 " Use K to show documentation in preview window

@@ -31,4 +31,7 @@ else
     source $HOME/.config/nvim/plug-config/signify.vim
     source $HOME/.config/nvim/plug-config/asynctask.vim
     source $HOME/.config/nvim/plug-config/floatterm.vim
+    source $HOME/.config/nvim/plug-config/ultisnips.vim
+    source $HOME/.config/nvim/plug-config/vimtex.vim
+"    source $HOME/.config/nvim/lua/treesitter.lua
 endif
