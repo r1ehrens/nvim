@@ -42,8 +42,8 @@ nnoremap <leader>q :q<cr>
 
 " map ESC
 cnoremap jj <esc>
-inoremap jj <esc>l
-snoremap jj <esc>l
+inoremap jj <esc>
+snoremap jj <esc>
 tnoremap jj <c-\><c-n>
 " cannot be used since ranger is also in a terminal!
 "tnoremap <esc> <c-\><c-n>
