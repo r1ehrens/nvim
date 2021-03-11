@@ -32,6 +32,14 @@
 
 `sudo dnf install ctags`
 
+### configure vscode
+
+`cd ~/.config/Code/User/`
+
+`ln -s GITHUBDIR/nvim/vscode/settings.json`
+
+`ln -s GITHUBDIR/nvim/vscode/keybindings.json`
+
 ## coc-extensions
 
     node has to be installed

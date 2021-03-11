@@ -1,0 +1,144 @@
+{
+    "editor.suggestSelection": "first",
+    "editor.wordWrap": "wordWrapColumn",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "workbench.colorTheme": "Gruvbox Material Dark",
+    "latex-workshop.view.pdf.viewer": "tab",
+    "vim.hlsearch": true,
+    "vim.vimrc.enable": true,
+    "files.exclude": {
+        "**/.classpath": true,
+        "**/.project": true,
+        "**/.settings": true,
+        "**/.factorypath": true
+    },
+    "java.configuration.runtimes": [
+        {
+            "name": "JavaSE-11",
+            "path": "/usr/lib/jvm/java-11-openjdk-11.0.10.0.9-0.fc33.x86_64"
+        },
+        {
+            "name": "JavaSE-11",
+            "path": "/usr/lib/jvm/java-11-openjdk-11.0.10.0.9-0.fc33.x86_64",
+            "default": true
+        }
+    ],
+    "vim.leader": "<space>",
+    "vim.easymotion": true,
+    "vim.enableNeovim": true,
+    "vim.neovimPath": "/usr/local/bin/nvim",
+    "vim.insertModeKeyBindings": [
+            {
+      "before": ["j", "j"],
+      "after": ["<Esc>"]
+    }
+],
+"vim.normalModeKeyBindingsNonRecursive": [
+    {
+        "before": ["-"],
+        "after": ["/"]
+    },
+    {
+        "before": ["<leader>","e"],
+        "commands": ["workbench.action.toggleSidebarVisibility"]
+    
+    },
+    {
+        "before": ["g","d"],
+        "commands": ["editor.action.revealDefinition"]
+    
+    },
+    {
+        "before": ["]","g"],
+        "commands": ["editor.action.marker.nextInFiles"]
+    
+    },
+    {
+        "before": ["[","g"],
+        "commands": ["editor.action.marker.prevInFiles"]
+    
+    },
+    {
+        "before": [">"],
+        "commands": ["editor.action.indentLines"]
+    },
+    {
+        "before": ["<"],
+        "commands": ["editor.action.outdentLines"]
+    },
+    {
+        "before": ["<leader>","b", "d"],
+        "commands": ["workbench.action.closeActiveEditor"]
+    },
+    {
+        "before": ["<leader>","n"],
+        "commands": [":noh"]
+    },
+    {
+        "before": ["<leader>","q"],
+        "commands": ["workbench.action.closeEditorsInGroup"]
+    },
+    {
+        "before": ["<leader>","f", "f"],
+        "commands": ["editor.action.startFindReplaceAction"]
+    },
+    {
+        "before": ["<leader>","s", "f"],
+        "commands": ["workbench.action.quickOpen"]
+    
+    },
+    {
+        "before": ["<leader>","w", "v"],
+        "commands": ["workbench.action.splitEditor"]
+    
+    },
+    {
+        "before": ["<leader>","w", "s"],
+        "commands": ["workbench.action.splitEditorOrthogonal"]
+    
+    },
+    {
+        "before": ["<leader>","o"],
+        "commands": ["workbench.action.files.openFile"]
+    
+    },
+    {
+        "before": ["<leader>","z"],
+        "commands": ["workbench.action.toggleZenMode"]
+    
+    },
+    {
+        "before": ["<leader>","a", "m"],
+        "commands": ["markdown.showPreviewToSide"]
+    
+    },
+    {
+        "before": ["<leader>","l", "r"],
+        "commands": ["editor.action.rename"]
+    }    
+],
+"java.home": "/usr/lib/jvm/java-11-openjdk-11.0.10.0.9-0.fc33.x86_64",
+"vim.highlightedyank.enable": true,
+"vim.searchHighlightTextColor": "rgb(0,0,0)",
+"vim.searchHighlightColor": "rgb(255,255,0)",
+"vim.showMarksInGutter": true,
+"vim.showmodename": false,
+"vim.useSystemClipboard": true,
+"vim.visualstar": true,
+"workbench.colorCustomizations": {
+    "editor.selectionBackground": "#8a8787",
+    "editor.selectionHighlightBackground": "#8a8787"
+},
+"python.languageServer": "Pylance",
+"debug.javascript.autoAttachFilter": "smart",
+
+"[javascript]":{
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true
+},
+"[typescript]": {
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true
+},
+"editor.tabSize": 2,
+}
