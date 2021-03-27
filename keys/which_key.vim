@@ -44,19 +44,12 @@ let g:which_key_map['='] = [ '<C-W>='                                          ,
 let g:which_key_map['e'] = [ ':CocCommand explorer --toggle --sources=file+'   , 'explorer' ]
 let g:which_key_map['n'] = [ ':let @/ = ""'                                    , 'no highlight' ]
 let g:which_key_map['r'] = [ ':RnvimrToggle'                                   , 'ranger' ]
-let g:which_key_map['p'] = [ ':Files'                                          , 'search files' ]
+let g:which_key_map['p'] = [ ':MarkdownPreview'                                          , 'markdown preview' ]
 "let g:which_key_map['T'] = [ ':TSHighlightCapturesUnderCursor'                 , 'treesitter highlight' ]
 let g:which_key_map['u'] = [ ':UndotreeToggle'                                 , 'undo tree']
 let g:which_key_map['z'] = [ 'Goyo'                                            , 'zen' ]
 
 " Group mappings
-
-" a is for actions
-let g:which_key_map['a'] = {
-      \ 'name' : '+actions' ,
-      \ 'm' : [':MarkdownPreview'        , 'markdown preview'],
-      \ 'M' : [':MarkdownPreviewStop'    , 'markdown preview stop'],
-      \ }
 
 " b is for buffer
 let g:which_key_map['b'] = {
@@ -160,8 +153,8 @@ let g:which_key_map['l'] = {
       \ 'o' : [':CocList outline'                    , 'search outline'],
       \ 'p' : ['<Plug>(coc-diagnostic-prev)'         , 'prev diagnostic'],
       \ 'P' : ['<Plug>(coc-diagnostic-prev-error)'   , 'prev error'],
-      \ 'r' : ['<Plug>(coc-references)'              , 'references'],
-      \ 'R' : ['<Plug>(coc-rename)'                  , 'rename'],
+      \ 'R' : ['<Plug>(coc-references)'              , 'references'],
+      \ 'r' : ['<Plug>(coc-rename)'                  , 'rename'],
       \ 's' : ['<Plug>(coc-refactor)'                 , 'refactor'],
       \ 'S' : [':CocList snippets'                   , 'snippets'],
       \ 'u' : [':CocListResume'                      , 'resume list'],
