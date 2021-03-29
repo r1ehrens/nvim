@@ -1,5 +1,6 @@
 {
     "editor.suggestSelection": "first",
+    "terminal.integrated.fontFamily": "Hack Nerd Font",
     "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
     "latex-workshop.view.pdf.viewer": "tab",
     "files.exclude": {

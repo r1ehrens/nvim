@@ -2,12 +2,12 @@
   {
     "key": "tab",
     "command": "workbench.action.nextEditor",
-    "when": "vim.mode != 'Insert'"
+    "when": "!terminalFocus && vim.mode != 'Insert'"
   },
   {
     "key": "shift+tab",
     "command": "workbench.action.previousEditor",
-    "when": "vim.mode != 'Insert'"
+    "when": "!terminalFocus && vim.mode != 'Insert'"
   },
   {
     "key": "tab",
