@@ -34,6 +34,9 @@ set shiftround
 " Use one space, not two, after punctuation in command
 set nojoinspaces
 
+" With G or gg do not change column
+set nostartofline
+
 " show command in last line of screen
 set showcmd
 let mapleader = "\<space>"
@@ -93,11 +96,13 @@ set history=50
 " Number
 set number
 set numberwidth=5
-"set relativenumber
+" set relativenumber
 
 " Menu
 set wildmenu
 
+" Allows working with the mouse
+set mouse=a
 " Fold unfortunatly has a lot of problems with plugins
 " will open all folds when opening a buffer
 "autocmd BufRead * normal zR

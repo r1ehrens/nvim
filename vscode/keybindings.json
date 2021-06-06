@@ -89,5 +89,10 @@
     "key": "r",
     "command": "renameFile",
     "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+  },
+  {
+  "key": "v",
+  "command": "explorer.openToSide",
+  "when": "explorerViewletFocus && explorerViewletVisible && !inputFocus"
   }
 ]
