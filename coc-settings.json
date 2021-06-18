@@ -30,6 +30,8 @@
   },
   "snippets.priority": 1,
   "suggest.languageSourcePriority": 99,
+  "suggest.enablePreselect": false,
+  "suggest.noselect": false,
   "coc.source.file.priority": 2,
   "coc.source.around.priority": 3,
   "coc.source.buffer.priority": 4,

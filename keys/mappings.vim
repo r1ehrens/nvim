@@ -70,7 +70,6 @@ nnoremap <m-l> :vertical resize +2<cr>
 nnoremap <tab> :bnext<cr>
 nnoremap <s-tab> :bprevious<cr>
 
-
 " shift mappings
 vnoremap < <gv
 vnoremap > >gv
@@ -78,9 +77,10 @@ nnoremap < <<
 nnoremap > >>
 
 " coc mappings
-
 " with enter add everything from popup menu
-inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+inoremap <expr> <tab> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+" new line when pressing enter
+inoremap <expr> <cr> pumvisible() ? "\<esc>\<cr>\i" : "\<cr>"
 
 nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gr <Plug>(coc-references)

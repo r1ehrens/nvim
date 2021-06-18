@@ -1,4 +1,4 @@
-" Leader Key Maps
+" space Key Maps
 
 let @s = 'veS"'
 
@@ -7,9 +7,9 @@ let g:which_key_timeout = 100
 
 let g:which_key_display_names = {'<CR>': '↵', '<TAB>': '⇆'}
 
-" Map leader to which_key
-nnoremap <silent> <leader> :silent <c-u> :silent WhichKey '<Space>'<CR>
-vnoremap <silent> <leader> :silent <c-u> :silent WhichKeyVisual '<Space>'<CR>
+" Map space to which_key
+nnoremap <silent> <space> :silent <c-u> :silent WhichKey '<Space>'<CR>
+vnoremap <silent> <space> :silent <c-u> :silent WhichKeyVisual '<Space>'<CR>
 
 " Create map to add keys to
 let g:which_key_map =  {}
@@ -18,7 +18,7 @@ let g:which_key_sep = '→'
 " set timeoutlen=100
 
 " Coc Search & refactor
-nnoremap <leader>? :CocSearch <C-R>=expand("<cword>")<CR><CR>
+nnoremap <space>? :CocSearch <C-R>=expand("<cword>")<CR><CR>
 let g:which_key_map['?'] = 'search word'
 
 " Not a fan of floating windows for this
@@ -63,7 +63,7 @@ let g:which_key_map['b'] = {
       \ 'b' : ['Buffers'                , 'fzf-buffer'],
       \ '!' : [':bd!'                , 'buffer delete!'],
       \ }
-"noremap <silent><leader>bd :bp<cr>:bd #<cr>
+"noremap <silent><space>bd :bp<cr>:bd #<cr>
 
 let g:which_key_map['c'] = {
      \ 'name' : '+comment' ,
@@ -71,8 +71,8 @@ let g:which_key_map['c'] = {
      \ 'v' : [''   , 'comment visual'],
      \ 't' : ['gcgc' , 'uncomment adjacent'],
      \ }
-nmap <leader>cc gcc
-vmap <leader>cv gc
+nmap <space>cc gcc
+vmap <space>cv gc
 
 " d is for debug
 let g:which_key_map['d'] = {
@@ -216,8 +216,8 @@ let g:which_key_map['v'] = {
       \ }
       "\ 'p' : [':diffput'     , 'put']          ,
       "\ 'g' : [':diffget'     , 'get']         ,
-nnoremap <leader>vp :diffput<space>
-nnoremap <leader>vg :diffget<space>
+nnoremap <space>vp :diffput<space>
+nnoremap <space>vg :diffget<space>
 
 let g:which_key_map['w'] = {
       \ 'name' : '+windows' ,
