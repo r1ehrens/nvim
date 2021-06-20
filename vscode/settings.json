@@ -29,6 +29,11 @@
     "vim.leader": ",",
     "vim.enableNeovim": true,
     "vim.neovimPath": "/usr/local/bin/nvim",
+		"vim.handleKeys": {
+			"<C-b>": false,
+			"<C-w>": false,
+			"<C-d>": false
+		},
     "vim.insertModeKeyBindings": [
             {
       "before": ["j", "j"],
@@ -108,7 +113,8 @@
         "editor.defaultFormatter": "esbenp.prettier-vscode",
         "editor.formatOnSave": true
     },
-    "editor.tabSize": 8,
+    "editor.tabSize": 2,
+    "editor.detectIndentation": false,
     "files.associations": {
         "*.hs": "haskell"
     },
@@ -120,7 +126,7 @@
         }
     ],
     "java.home": "/usr/lib/jvm/java-11-openjdk",
-    "workbench.colorTheme": "Gruvbox Material Dark",
+    "workbench.colorTheme": "Gruvbox Material Light",
     "workbench.colorCustomizations": {
         "editor.selectionBackground": "#8a8787",
         "editor.selectionHighlightBackground": "#8a8787"

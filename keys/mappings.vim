@@ -80,7 +80,7 @@ nnoremap > >>
 " with enter add everything from popup menu
 inoremap <expr> <tab> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 " new line when pressing enter
-inoremap <expr> <cr> pumvisible() ? "\<esc>\<cr>\i" : "\<cr>"
+" inoremap <expr> <cr> pumvisible() ? "\<esc>\<cr>\i" : "\<cr>"
 
 nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gr <Plug>(coc-references)
