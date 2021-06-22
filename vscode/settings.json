@@ -126,7 +126,7 @@
         }
     ],
     "java.home": "/usr/lib/jvm/java-11-openjdk",
-    "workbench.colorTheme": "Gruvbox Material Light",
+    "workbench.colorTheme": "Gruvbox Material Dark",
     "workbench.colorCustomizations": {
         "editor.selectionBackground": "#8a8787",
         "editor.selectionHighlightBackground": "#8a8787"

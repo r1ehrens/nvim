@@ -39,7 +39,7 @@ set nostartofline
 
 " show command in last line of screen
 set showcmd
-let mapleader = ","
+let mapleader = " "
 
 " do not generate any swapfiles
 set noswapfile

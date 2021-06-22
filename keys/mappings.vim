@@ -20,9 +20,9 @@ inoremap <c-k> <c-\><c-N><c-w>k
 inoremap <c-l> <c-\><c-N><c-w>l
 
 " Move selected line / block of text in visual mode
-
 xnoremap K :move '<-2<cr>gv-gv
 xnoremap J :move '>+1<cr>gv-gv
+
 
 " Fast split navigation with <Ctrl> + hjkl
 nnoremap <c-h> <C-w>h
@@ -44,9 +44,9 @@ nnoremap <leader>q :q<cr>
 cnoremap jj <esc>
 inoremap jj <esc>
 snoremap jj <esc>
-"tnoremap jj <c-\><c-n>
+" tnoremap jj <c-\><c-n>
 " cannot be used since ranger is also in a terminal!
-"tnoremap <esc> <c-\><c-n>
+tnoremap <esc> <c-\><c-n>
 
 " map search
 nnoremap * *N
@@ -78,18 +78,17 @@ nnoremap > >>
 
 " coc mappings
 " with enter add everything from popup menu
-inoremap <expr> <tab> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+inoremap <expr> <tab> pumvisible() ? "\<C-y>" : "<tab>"
 " new line when pressing enter
+" if !exists('g:vscode')
 " inoremap <expr> <cr> pumvisible() ? "\<esc>\<cr>\i" : "\<cr>"
+" endif
 
 nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gr <Plug>(coc-references)
 
 " Use K to show documentation in preview window
 nnoremap <silent> K :call <SID>show_documentation()<CR>
-
-" Easymotion mappings
-map , <Plug>(easymotion-prefix)
 
 
 "Unbind some useless key bindings
@@ -102,3 +101,6 @@ inoremap <up> <nop>
 inoremap <down> <nop>
 inoremap <left> <nop>
 inoremap <right>  <nop>
+
+nnoremap <leader>. :e $MYVIMRC<cr>
+nnoremap <c-w> :bd<cr>
