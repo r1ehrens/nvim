@@ -4,7 +4,7 @@
 
 ### get nvim
 
-`curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim.appimage -o /tmp/nvim.appimage` Will most-likely create a directory at current directory!
+`curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim.appimage`
 
 `sudo mv /tmp/nvim.appimage /usr/local/bin/nvim`
 
