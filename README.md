@@ -14,20 +14,18 @@
 
 `git clone https://github.com/r1ehrens/nvim.git ~/.config/nvim`
 
+### Install vimplug
+`sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
+       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'`
+
 ### Install python & node support
+install python3!
+`pip3 install pynvim`
 
-`pip install pynvim`
-
+### Install npm
+install npm!
 `npm i -g neovim` does probably need sudo prefix
-
-### Install Neovim remote
-
-`pip install neovim-remote`
-
-### install neovim nightly(0.5)
-
-[install page](https://dev.to/creativenull/installing-neovim-nightly-alongside-stable-10d0)
-
+        
 ### ctags
 
 `sudo dnf install ctags`
@@ -43,6 +41,8 @@
 ## coc-extensions
 
     node has to be installed
+    :CocInstall ...
+    Files are most likely safed under .config/coc/...
 
     - coc-clangd
     - coc-docker
