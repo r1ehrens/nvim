@@ -1,120 +1,132 @@
 {
+        // Fonts
     "terminal.integrated.fontFamily": "Jetbrains Mono",
+    "editor.inlayHints.fontFamily": "Jetbrains Mono",
     "editor.fontFamily": "Jetbrains Mono",
     "editor.fontLigatures": true,
-    "editor.inlayHints.fontFamily": "Jetbrains Mono",
+
     "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
     "latex-workshop.view.pdf.viewer": "tab",
     "files.exclude": {
+        "**/.factorypath": true,
         "**/.classpath": true,
-        "**/.project": true,
         "**/.settings": true,
-        "**/.factorypath": true
+        "**/.project": true,
     },
     "search.useIgnoreFiles": false,
 
 
-
     "editor.suggestSelection": "first",
-    "editor.rulers": [80],
     "editor.wrappingIndent": "same",
     "editor.tabCompletion": "on",
+    "editor.rulers": [80],
     
     
 
 
-    "vim.startofline": false,
-    "vim.hlsearch": true,
+
+        // Vim
+    "vim.leader": "space",
+    "vim.highlightedyank.enable": true,
+	"vim.neovimUseConfigFile": true,
+    "vim.useSystemClipboard": true,
+    "vim.showMarksInGutter": true,
     "vim.vimrc.enable": true,
-    "vim.leader": ",",
     "vim.enableNeovim": true,
-    "vim.neovimPath": "/usr/local/bin/nvim",
+    "vim.showmodename": true,
+    "vim.visualstar": true,
+    "vim.hlsearch": true,
+    "vim.startofline": false,
+    "vim.searchHighlightTextColor": "rgb(0,0,0)",
+    "vim.searchHighlightColor": "rgb(255,255,0)",
+    "vim.neovimPath": "/usr/bin/nvim",
 		"vim.handleKeys": {
 			"<C-b>": false,
 			"<C-w>": false,
-			"<C-d>": false
+			// "<C-d>": false,
+			"<C-f>": false,
+			"<C-h>": false
 		},
     "vim.insertModeKeyBindings": [
-            {
-      "before": ["j", "j"],
-      "after": ["<Esc>"]
-    }
-],
-"vim.visualModeKeyBindingsNonRecursive": [
-    {
-        "before": [">"],
-        "after": [">","g","v"]
-    },
-    {
-        "before": ["<"],
-        "after": ["<", "g","v"]
-    }
-],
-"vim.normalModeKeyBindingsNonRecursive": [
-    {
-        "before": ["j"],
-        "after": ["g", "j"]
-    },
-    {
-        "before": ["k"],
-        "after": ["g", "k"]
-    },
-    {
-        "before": [ "-" ],
-        "after": [ "/" ]
-    },
-    {
-        "before": ["y","p"],
-        "after": ["\"","0","p"]
-    },
-    {
-        "before": ["g","d"],
-        "commands": ["editor.action.revealDefinition"]
-    },
-    {
-        "before": ["g","f"],
-        "commands": ["editor.action.openLink"]
-    },
-    {
-        "before": ["]","g"],
-        "commands": ["editor.action.marker.next"]
-    
-    },
-    {
-        "before": ["[","g"],
-        "commands": ["editor.action.marker.prev"]
-    
-    },
-    {
-        "before": [">"],
-        "commands": ["editor.action.indentLines"]
-    },
-    {
-        "before": ["<"],
-        "commands": ["editor.action.outdentLines"]
-    }
-],
-"vim.highlightedyank.enable": true,
-"vim.searchHighlightTextColor": "rgb(0,0,0)",
-"vim.searchHighlightColor": "rgb(255,255,0)",
-"vim.showMarksInGutter": true,
-"vim.showmodename": true,
-"vim.useSystemClipboard": true,
-"vim.visualstar": true,
+        {
+            "before": ["j", "j"],
+            "after": ["<Esc>"]
+        }
+    ],
+    "vim.visualModeKeyBindingsNonRecursive": [
+        {
+            "before": [">"],
+            "after": [">","g","v"]
+        },
+        {
+            "before": ["<"],
+            "after": ["<", "g","v"]
+        }
+    ],
+    "vim.normalModeKeyBindingsNonRecursive": [
+        {
+            "before": ["<leader>","."],
+            "commands": ["workbench.action.openSettingsJson"]
+        },
+        {
+            "before": ["j"],
+            "after": ["g", "j"]
+        },
+        {
+            "before": ["k"],
+            "after": ["g", "k"]
+        },
+        {
+            "before": [ "-" ],
+            "after": [ "/" ]
+        },
+        {
+            "before": ["y","p"],
+            "after": ["\"","0","p"]
+        },
+        {
+            "before": ["g","d"],
+            "commands": ["editor.action.revealDefinition"]
+        },
+        {
+            "before": ["g","f"],
+            "commands": ["editor.action.openLink"]
+        },
+        {
+            "before": ["]","g"],
+            "commands": ["editor.action.marker.next"]
+
+        },
+        {
+            "before": ["[","g"],
+            "commands": ["editor.action.marker.prev"]
+
+        },
+        {
+            "before": [">"],
+            "commands": ["editor.action.indentLines"]
+        },
+        {
+            "before": ["<"],
+            "commands": ["editor.action.outdentLines"]
+        },
+        {
+            "before" : ["p"],
+            "after": ["p", "g", "v", "y"]
+        }
+    ],
 
 
     "python.languageServer": "Pylance",
     "debug.javascript.autoAttachFilter": "smart",
-    "[javascript]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode",
-        "editor.formatOnSave": true
-    },
-    "[typescript]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode",
-        "editor.formatOnSave": true
-    },
-    "editor.tabSize": 2,
-    "editor.detectIndentation": false,
+    // "[javascript]": {
+    //     "editor.defaultFormatter": "esbenp.prettier-vscode",
+    //     "editor.formatOnSave": true
+    // },
+    // "[typescript]": {
+    //     "editor.defaultFormatter": "esbenp.prettier-vscode",
+    //     "editor.formatOnSave": true
+    // },
     "files.associations": {
         "*.hs": "haskell"
     },
@@ -126,17 +138,7 @@
         }
     ],
     "java.home": "/usr/lib/jvm/java-11-openjdk",
-    "workbench.colorTheme": "Gruvbox Material Dark",
-    "workbench.colorCustomizations": {
-        "editor.selectionBackground": "#8a8787",
-        "editor.selectionHighlightBackground": "#8a8787"
-    },
-    "workbench.editorAssociations": {
-        "*.ipynb": "jupyter.notebook.ipynb"
-    },
-    "workbench.iconTheme": "material-icon-theme",
     "csharp.semanticHighlighting.enabled": true,
-    "workbench.productIconTheme": "material-product-icons",
     "projectManager.git.baseFolders": [
         "~/hsr/epj/api",
         "~/hsr/epj/documentation",
@@ -182,12 +184,28 @@
             "value": "#42b883"
         }
     ],
-    "window.zoomLevel": 1,
+    "editor.wordSeparators": "/\\()\"':,.;<>~!@#$%^&*|+=[]{}`?-",
     "editor.acceptSuggestionOnEnter": "off",
     "editor.cursorStyle": "line",
-    "editor.insertSpaces": false,
     "editor.lineNumbers": "on",
-    "editor.wordSeparators": "/\\()\"':,.;<>~!@#$%^&*|+=[]{}`?-",
     "editor.wordWrap": "off",
-    "vim.easymotion": true,
+    "window.zoomLevel": 1,
+
+        // Spaces
+    "editor.detectIndentation": false,
+    "editor.insertSpaces": true,
+    "editor.tabSize": 4,
+
+        // Design
+    "workbench.productIconTheme": "material-product-icons",
+    "workbench.colorTheme": "Gruvbox Material Dark",
+    "workbench.iconTheme": "material-icon-theme",
+    "workbench.colorCustomizations": {
+        "editor.selectionBackground": "#8a8787",
+        "editor.selectionHighlightBackground": "#8a8787"
+    },
+    "material-icon-theme.folders.color": "#90a4ae",
+    "material-icon-theme.folders.theme": "specific",
+    "material-icon-theme.opacity": 1,
+    "material-icon-theme.saturation": 1,
 }

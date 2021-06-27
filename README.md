@@ -44,10 +44,10 @@ install npm!
     :CocInstall ...
     Files are most likely safed under .config/coc/...
 
+    - coc-explorer
     - coc-clangd
     - coc-docker
     - coc-eslint
-    - coc-explorer
     - coc-fzf-preview
     - coc-html
     - coc-java

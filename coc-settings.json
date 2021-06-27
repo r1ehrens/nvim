@@ -1,6 +1,4 @@
 {
-
-  // TODO add more labels and give them cool glyphs
   "suggest.completionItemKindLabels": {
     "text": "t",
     "method": "m",

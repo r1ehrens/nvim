@@ -10,10 +10,11 @@ noremap k gk
 "inoremap [ []<esc>i
 
 " Terminal window navigation
-tnoremap <c-h> <c-\><c-N><c-w>h
-tnoremap <c-j> <c-\><c-N><c-w>j
-tnoremap <c-k> <c-\><c-N><c-w>k
-tnoremap <c-l> <c-\><c-N><c-w>l
+" cannot be used since fzf is in a terminal
+" tnoremap <c-h> <c-\><c-N><c-w>h
+" tnoremap <c-j> <c-\><c-N><c-w>j
+" tnoremap <c-k> <c-\><c-N><c-w>k
+" tnoremap <c-l> <c-\><c-N><c-w>l
 inoremap <c-h> <c-\><c-N><c-w>h
 inoremap <c-j> <c-\><c-N><c-w>j
 inoremap <c-k> <c-\><c-N><c-w>k
@@ -39,14 +40,16 @@ nnoremap <c-s> :w<cr>
 
 " close window
 nnoremap <leader>q :q<cr>
+"close current buffer
+nnoremap <c-w> :bd<cr>
 
 " map ESC
 cnoremap jj <esc>
 inoremap jj <esc>
 snoremap jj <esc>
 " tnoremap jj <c-\><c-n>
-" cannot be used since ranger is also in a terminal!
-tnoremap <esc> <c-\><c-n>
+" cannot be used since fzf is in a terminal
+" tnoremap <esc> <c-\><c-n>
 
 " map search
 nnoremap * *N
@@ -76,20 +79,16 @@ vnoremap > >gv
 nnoremap < <<
 nnoremap > >>
 
-" coc mappings
-" with enter add everything from popup menu
-inoremap <expr> <tab> pumvisible() ? "\<C-y>" : "<tab>"
-" new line when pressing enter
-" if !exists('g:vscode')
-" inoremap <expr> <cr> pumvisible() ? "\<esc>\<cr>\i" : "\<cr>"
-" endif
-
-nmap <silent> gd <Plug>(coc-definition)
-nmap <silent> gr <Plug>(coc-references)
-
 " Use K to show documentation in preview window
 nnoremap <silent> K :call <SID>show_documentation()<CR>
 
+
+" open vimrc settings
+nnoremap <leader>. :e $MYVIMRC<cr>
+
+" imports
+source $HOME/.config/nvim/keys/coc-mappings.vim
+source $HOME/.config/nvim/keys/fzf-mappings.vim
 
 "Unbind some useless key bindings
 nmap Q <nop>
@@ -101,6 +100,3 @@ inoremap <up> <nop>
 inoremap <down> <nop>
 inoremap <left> <nop>
 inoremap <right>  <nop>
-
-nnoremap <leader>. :e $MYVIMRC<cr>
-nnoremap <c-w> :bd<cr>
