@@ -110,10 +110,6 @@
             "before": ["<"],
             "commands": ["editor.action.outdentLines"]
         },
-        {
-            "before" : ["p"],
-            "after": ["p", "g", "v", "y"]
-        }
     ],
 
 
