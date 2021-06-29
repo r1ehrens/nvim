@@ -185,7 +185,7 @@
     "editor.cursorStyle": "line",
     "editor.lineNumbers": "on",
     "editor.wordWrap": "off",
-    "window.zoomLevel": 1,
+    "window.zoomLevel": 2,
 
         // Spaces
     "editor.detectIndentation": false,
@@ -194,7 +194,7 @@
 
         // Design
     "workbench.productIconTheme": "material-product-icons",
-    "workbench.colorTheme": "Gruvbox Material Dark",
+    "workbench.colorTheme": "Gruvbox Material Light",
     "workbench.iconTheme": "material-icon-theme",
     "workbench.colorCustomizations": {
         "editor.selectionBackground": "#8a8787",
