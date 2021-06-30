@@ -25,7 +25,7 @@ let g:startify_bookmarks = [
     \]
 let g:startify_enable_special = 0
 
-" start Startify on new tab
-if has('nvim')
-  au! TabNewEntered * Startify
-endif
+" start Startify on new tab !!! Can no longer open tabs from explorer
+" if has('nvim')
+"   au! TabNewEntered * Startify
+" endif

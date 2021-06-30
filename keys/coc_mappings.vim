@@ -3,7 +3,7 @@ inoremap <expr> <tab> pumvisible() ? "\<C-y>" : "<tab>"
 
 " new line when pressing enter
 if !exists('g:vscode')
-inoremap <expr> <cr> pumvisible() ? "\<esc>\<cr>\i" : "\<cr>"
+inoremap <expr> <cr> pumvisible() ? "\<esc>\o" : "\<cr>"
 endif
 
 nmap <silent> gd <Plug>(coc-definition)

@@ -40,8 +40,14 @@ nnoremap <c-s> :w<cr>
 
 " close window
 nnoremap <leader>q :q<cr>
-"close current buffer
-nnoremap <c-w> :bd<cr>
+
+" close current buffer
+nnoremap <leader>bd :bd<cr>
+
+"create new tab
+nnoremap <c-t> :tabnew<cr>
+" close current buffer
+nnoremap <c-w> :tabclose<cr>
 
 " map ESC
 cnoremap jj <esc>
@@ -73,8 +79,6 @@ nnoremap <m-l> :vertical resize +2<cr>
 nnoremap <tab> :tabnext<cr>
 nnoremap <s-tab> :tabprevious<cr>
 
-"create new tab
-nnoremap tn :tabnew<cr>
 
 " open Startify
 nnoremap <m-s> :Startify<cr>

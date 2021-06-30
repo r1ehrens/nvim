@@ -14,9 +14,9 @@ source $HOME/.config/nvim/themes/colors.vim
 
 " Mappings
 source $HOME/.config/nvim/keys/mappings.vim
-source $HOME/.config/nvim/keys/coc-mappings.vim
-source $HOME/.config/nvim/keys/fzf-mappings.vim
-
+source $HOME/.config/nvim/keys/coc_mappings.vim
+source $HOME/.config/nvim/keys/fzf_mappings.vim
+source $HOME/.config/nvim/keys/startify_mappings.vim
 
 " Plugin Configuration
 source $HOME/.config/nvim/general/plugins.vim
