@@ -86,10 +86,6 @@ nnoremap <silent> K :call <SID>show_documentation()<CR>
 " open vimrc settings
 nnoremap <leader>. :e $MYVIMRC<cr>
 
-" imports
-source $HOME/.config/nvim/keys/coc-mappings.vim
-source $HOME/.config/nvim/keys/fzf-mappings.vim
-
 "Unbind some useless key bindings
 nmap Q <nop>
 noremap <up> <nop>

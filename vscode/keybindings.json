@@ -56,6 +56,13 @@
         "when": "editorTextFocus && suggestWidgetMultipleSuggestions && suggestWidgetVisible"
     },
 
+    // Open explorer
+    {
+        "key": "ctrl+e",
+        "command": "workbench.view.explorer",
+        "when": "viewContainer.workbench.view.explorer.enabled"
+	},
+
     // rename current focused file in explorer
     {
         "key": "r",
@@ -70,26 +77,26 @@
         "when": "explorerViewletFocus && explorerViewletVisible && !inputFocus"
     },
 
-    // create new file
+    // create new file in explorer
     {
         "key": "a",
         "command": "workbench.files.action.createFileFromExplorer",
         "when": "explorerViewletFocus && explorerViewletVisible && !inputFocus"
     },
 
-    // create new directory
+    // create new directory in explorer
     {
         "key": "shift+a",
         "command": "workbench.files.action.createFolderFromExplorer",
         "when": "explorerViewletFocus && explorerViewletVisible && !inputFocus"
     },
 
-    // Open explorer
+    // delete file in explorer
     {
-        "key": "ctrl+e",
-        "command": "workbench.view.explorer",
-        "when": "viewContainer.workbench.view.explorer.enabled"
-	},
+    "key": "d",
+    "command": "deleteFile",
+    "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceReadonly && !inputFocus"
+    },
 
     // Display information to current cursor hover
     {  

@@ -44,7 +44,7 @@
   "codeLens.enable": true,
 
   // snippets
-  "snippets.ultisnips.directories": ["UltiSnips", "~/.config/nvim/snips"],
+  "snippets.userSnippetsDirectory": "~/.config/nvim/snips",
 
   // list
   "list.indicator": ">",

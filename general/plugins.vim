@@ -46,4 +46,7 @@ Plug 'mhinz/vim-signify'
 " pulse when entry found
 Plug 'inside/vim-search-pulse'
 
+" some snippets
+Plug 'honza/vim-snippets'
+
 call plug#end()
