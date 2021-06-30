@@ -1,4 +1,5 @@
 [
+    // Use Tab / Shift+Tab to change Tabs
     {
         "key": "tab",
         "command": "workbench.action.nextEditor",
@@ -9,15 +10,19 @@
         "command": "workbench.action.previousEditor",
         "when": "!terminalFocus && vim.mode != 'Insert'"
     },
-    {
-        "key": "ctrl+l",
-        "command": "workbench.action.navigateRight"
-    },
+
+    // Use Ctrl+h / Ctrl+l to move with cursor to left / right file / workbench
     {
         "key": "ctrl+h",
         "command": "workbench.action.navigateLeft"
     },
-    // depends on order of(ctrl+j, ctrl+k)!
+    {
+        "key": "ctrl+l",
+        "command": "workbench.action.navigateRight"
+    },
+
+    // depends on order of(ctrl+j, ctrl+k)! without "when" has to be first
+    // Use Ctrl+j / Ctrl+k to change between lower / upper file / workbench / terminal
     {
         "key": "ctrl+j",
         "command": "workbench.action.navigateDown"
@@ -26,6 +31,20 @@
         "key": "ctrl+k",
         "command": "workbench.action.navigateUp"
     },
+
+    // Move in Quick Open with Ctrl+j / Ctrl+k
+    {
+        "key": "ctrl+j",
+        "command": "workbench.action.quickOpenSelectNext",
+        "when": "inQuickOpen"
+    },
+    {
+        "key": "ctrl+k",
+        "command": "workbench.action.quickOpenSelectPrevious",
+        "when": "inQuickOpen"
+    },
+
+    // Move in Suggestion with Ctrl+j / Ctrl+k
     {
         "key": "ctrl+j",
         "command": "selectNextSuggestion",
@@ -36,26 +55,50 @@
         "command": "selectPrevSuggestion",
         "when": "editorTextFocus && suggestWidgetMultipleSuggestions && suggestWidgetVisible"
     },
+
+    // rename current focused file in explorer
     {
         "key": "r",
         "command": "renameFile",
         "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
     },
+
+    // Open current focused file in explorer as split
     {
         "key": "v",
         "command": "explorer.openToSide",
         "when": "explorerViewletFocus && explorerViewletVisible && !inputFocus"
     },
+
+    // create new file
+    {
+        "key": "a",
+        "command": "workbench.files.action.createFileFromExplorer",
+        "when": "explorerViewletFocus && explorerViewletVisible && !inputFocus"
+    },
+
+    // create new directory
+    {
+        "key": "shift+a",
+        "command": "workbench.files.action.createFolderFromExplorer",
+        "when": "explorerViewletFocus && explorerViewletVisible && !inputFocus"
+    },
+
+    // Open explorer
     {
         "key": "ctrl+e",
         "command": "workbench.view.explorer",
         "when": "viewContainer.workbench.view.explorer.enabled"
 	},
+
+    // Display information to current cursor hover
     {  
         "key": "shift+k",
         "command": "editor.action.showHover",
-        "when":"editorTextFocus"
+        "when":"editorTextFocus && vim.mode != Insert"
     },
+
+    // Resize Terminal
     {
         "key": "ctrl+shift+j",
         "command": "workbench.action.terminal.resizePaneDown"
@@ -64,9 +107,11 @@
         "key": "ctrl+shift+k",
         "command": "workbench.action.terminal.resizePaneUp"
     },
+
+    // Open find & replace
     {
         "key": "ctrl+shift+r",
         "command": "editor.action.startFindReplaceAction",
         "when": "editorFocus || editorIsOpen"
-    }
+    },
 ]

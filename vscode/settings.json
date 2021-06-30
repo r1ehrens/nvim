@@ -16,37 +16,46 @@
     "search.useIgnoreFiles": false,
 
 
+    // Suggestion
     "editor.suggestSelection": "first",
     "editor.wrappingIndent": "same",
     "editor.tabCompletion": "on",
+
+    // Display line at 80 characters
     "editor.rulers": [80],
     
     
 
 
 
-        // Vim
+    // Vim
     "vim.leader": "space",
+    // blink on yanked line
     "vim.highlightedyank.enable": true,
 	"vim.neovimUseConfigFile": true,
     "vim.useSystemClipboard": true,
     "vim.showMarksInGutter": true,
     "vim.vimrc.enable": true,
     "vim.enableNeovim": true,
+    // if false, wont be able to see what I'm searching for!
     "vim.showmodename": true,
+    // In visual mode search for current select with * / #
     "vim.visualstar": true,
     "vim.hlsearch": true,
+    // when jumping around (10G) do not jump to start of line
     "vim.startofline": false,
     "vim.searchHighlightTextColor": "rgb(0,0,0)",
     "vim.searchHighlightColor": "rgb(255,255,0)",
     "vim.neovimPath": "/usr/bin/nvim",
-		"vim.handleKeys": {
-			"<C-b>": false,
-			"<C-w>": false,
-			// "<C-d>": false,
-			"<C-f>": false,
-			"<C-h>": false
-		},
+
+    // used keys for vscode shortcuts
+    "vim.handleKeys": {
+        "<C-b>": false,
+        "<C-w>": false,
+        // "<C-d>": false,
+        "<C-f>": false,
+        "<C-h>": false
+    },
     "vim.insertModeKeyBindings": [
         {
             "before": ["j", "j"],
@@ -54,6 +63,7 @@
         }
     ],
     "vim.visualModeKeyBindingsNonRecursive": [
+        // easier indent
         {
             "before": [">"],
             "after": [">","g","v"]
@@ -64,10 +74,13 @@
         }
     ],
     "vim.normalModeKeyBindingsNonRecursive": [
+        // Open this file (Settings)
         {
             "before": ["<leader>","."],
             "commands": ["workbench.action.openSettingsJson"]
         },
+
+        // move visual lines not line numbers
         {
             "before": ["j"],
             "after": ["g", "j"]
@@ -76,22 +89,31 @@
             "before": ["k"],
             "after": ["g", "k"]
         },
+
         {
             "before": [ "-" ],
             "after": [ "/" ]
         },
+
+        // paste last yanked
         {
             "before": ["y","p"],
             "after": ["\"","0","p"]
         },
+
+        // go to definition
         {
             "before": ["g","d"],
             "commands": ["editor.action.revealDefinition"]
         },
+
+        // Open link under cursor
         {
             "before": ["g","f"],
             "commands": ["editor.action.openLink"]
         },
+
+        // move between errors
         {
             "before": ["]","g"],
             "commands": ["editor.action.marker.next"]
@@ -102,6 +124,8 @@
             "commands": ["editor.action.marker.prev"]
 
         },
+
+        // easier indent
         {
             "before": [">"],
             "commands": ["editor.action.indentLines"]
@@ -187,21 +211,17 @@
     "editor.wordWrap": "off",
     "window.zoomLevel": 2,
 
-        // Spaces
+    // use spaces for indents
     "editor.detectIndentation": false,
     "editor.insertSpaces": true,
     "editor.tabSize": 4,
 
-        // Design
+    // Design
     "workbench.productIconTheme": "material-product-icons",
-    "workbench.colorTheme": "Gruvbox Material Light",
+    "workbench.colorTheme": "Gruvbox Material Dark",
     "workbench.iconTheme": "material-icon-theme",
     "workbench.colorCustomizations": {
         "editor.selectionBackground": "#8a8787",
         "editor.selectionHighlightBackground": "#8a8787"
     },
-    "material-icon-theme.folders.color": "#90a4ae",
-    "material-icon-theme.folders.theme": "specific",
-    "material-icon-theme.opacity": 1,
-    "material-icon-theme.saturation": 1,
 }
