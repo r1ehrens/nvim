@@ -24,3 +24,8 @@ let g:startify_bookmarks = [
     \ { 'b': '~/.bashrc'},
     \]
 let g:startify_enable_special = 0
+
+" start Startify on new tab
+if has('nvim')
+  au! TabNewEntered * Startify
+endif

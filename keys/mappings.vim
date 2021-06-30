@@ -69,9 +69,15 @@ nnoremap <m-k> :resize +2<cr>
 nnoremap <m-h> :vertical resize -2<cr>
 nnoremap <m-l> :vertical resize +2<cr>
 
-" Use tab to switch to next buffer
-nnoremap <tab> :bnext<cr>
-nnoremap <s-tab> :bprevious<cr>
+" Use <tab> to switch to next tab
+nnoremap <tab> :tabnext<cr>
+nnoremap <s-tab> :tabprevious<cr>
+
+"create new tab
+nnoremap tn :tabnew<cr>
+
+" open Startify
+nnoremap <m-s> :Startify<cr>
 
 " shift mappings
 vnoremap < <gv
