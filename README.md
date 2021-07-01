@@ -20,6 +20,8 @@
 
 `ln -s .config/nvim/vscode/keybindings.json`
 
+`ln -s .config/nvim/vscode/snippets`
+
 ### Install fzf
 
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf ~/.fzf/install

@@ -1,8 +1,8 @@
 {
         // Fonts
-    "terminal.integrated.fontFamily": "Jetbrains Mono",
-    "editor.inlayHints.fontFamily": "Jetbrains Mono",
-    "editor.fontFamily": "Jetbrains Mono",
+    "terminal.integrated.fontFamily": "Hack Nerd Font",
+    "editor.inlayHints.fontFamily": "Hack Nerd Font",
+    "editor.fontFamily": "Hack Nerd Font",
     "editor.fontLigatures": true,
 
     "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
@@ -209,7 +209,7 @@
     "editor.cursorStyle": "line",
     "editor.lineNumbers": "on",
     "editor.wordWrap": "off",
-    "window.zoomLevel": 2,
+    "window.zoomLevel": 1,
 
     // use spaces for indents
     "editor.detectIndentation": false,
