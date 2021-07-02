@@ -17,6 +17,7 @@ source $HOME/.config/nvim/keys/mappings.vim
 source $HOME/.config/nvim/keys/coc_mappings.vim
 source $HOME/.config/nvim/keys/fzf_mappings.vim
 source $HOME/.config/nvim/keys/startify_mappings.vim
+source $HOME/.config/nvim/keys/signify_mappings.vim
 
 " Plugin Configuration
 source $HOME/.config/nvim/general/plugins.vim

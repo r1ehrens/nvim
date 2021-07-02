@@ -42,4 +42,5 @@ git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf ~/.fzf/install
   - Material icon Theme
   - Material Product Icon
   - Vim
+  - LaTeX Workshop
 
