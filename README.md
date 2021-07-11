@@ -43,4 +43,6 @@ git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf ~/.fzf/install
   - Material Product Icon
   - Vim
   - LaTeX Workshop
+  - Java Extension Pack
+  - C#
 

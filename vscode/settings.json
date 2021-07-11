@@ -150,14 +150,7 @@
     "files.associations": {
         "*.hs": "haskell"
     },
-    "java.configuration.runtimes": [
-        {
-            "name": "JavaSE-11",
-            "path": "/usr/lib/jvm/java-11-openjdk",
-            "default": true
-        }
-    ],
-    "java.home": "/usr/lib/jvm/java-11-openjdk",
+    "java.home": "/usr/lib/jvm/java-16-openjdk",
     "csharp.semanticHighlighting.enabled": true,
     "projectManager.git.baseFolders": [
         "~/hsr/epj/api",
@@ -218,7 +211,7 @@
 
     // Design
     "workbench.productIconTheme": "material-product-icons",
-    "workbench.colorTheme": "Gruvbox Material Dark",
+    "workbench.colorTheme": "Gruvbox Material Light",
     "workbench.iconTheme": "material-icon-theme",
     "workbench.colorCustomizations": {
         "editor.selectionBackground": "#8a8787",
