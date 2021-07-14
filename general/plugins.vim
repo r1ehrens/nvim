@@ -49,4 +49,7 @@ Plug 'inside/vim-search-pulse'
 " some snippets
 Plug 'honza/vim-snippets'
 
+" Highlighting
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+
 call plug#end()

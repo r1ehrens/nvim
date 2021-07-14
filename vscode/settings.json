@@ -1,220 +1,229 @@
 {
-        // Fonts
-    "terminal.integrated.fontFamily": "Hack Nerd Font",
-    "editor.inlayHints.fontFamily": "Hack Nerd Font",
-    "editor.fontFamily": "Hack Nerd Font",
-    "editor.fontLigatures": true,
+		// Fonts
+	"terminal.integrated.fontFamily": "Hack Nerd Font",
+	"editor.inlayHints.fontFamily": "Hack Nerd Font",
+	"editor.fontFamily": "Hack Nerd Font",
+	"editor.fontLigatures": true,
+	"editor.tokenColorCustomizations": {
+		"comments": "#229977"
+	},
 
-    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
-    "latex-workshop.view.pdf.viewer": "tab",
-    "files.exclude": {
-        "**/.factorypath": true,
-        "**/.classpath": true,
-        "**/.settings": true,
-        "**/.project": true,
-    },
-    "search.useIgnoreFiles": false,
-
-
-    // Suggestion
-    "editor.suggestSelection": "first",
-    "editor.wrappingIndent": "same",
-    "editor.tabCompletion": "on",
-
-    // Display line at 80 characters
-    "editor.rulers": [80],
-    
-    
+	"vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+	"latex-workshop.view.pdf.viewer": "tab",
+	"files.exclude": {
+		"**/.factorypath": true,
+		"**/.classpath": true,
+		"**/.settings": true,
+		"**/.project": true,
+	},
+	"search.useIgnoreFiles": false,
 
 
+	// Suggestion
+	"editor.suggestSelection": "first",
+	"editor.wrappingIndent": "same",
+	"editor.tabCompletion": "on",
 
-    // Vim
-    "vim.leader": "space",
-    // blink on yanked line
-    "vim.highlightedyank.enable": true,
+	// Display line at 80 characters
+	"editor.rulers": [80],
+	
+	
+
+
+
+	// Vim
+	"vim.leader": "space",
+	// Neovim
 	"vim.neovimUseConfigFile": true,
-    "vim.useSystemClipboard": true,
-    "vim.showMarksInGutter": true,
-    "vim.vimrc.enable": true,
-    "vim.enableNeovim": true,
-    // if false, wont be able to see what I'm searching for!
-    "vim.showmodename": true,
-    // In visual mode search for current select with * / #
-    "vim.visualstar": true,
-    "vim.hlsearch": true,
-    // when jumping around (10G) do not jump to start of line
-    "vim.startofline": false,
-    "vim.searchHighlightTextColor": "rgb(0,0,0)",
-    "vim.searchHighlightColor": "rgb(255,255,0)",
-    "vim.neovimPath": "/usr/bin/nvim",
+	"vim.enableNeovim": true,
+	"vim.neovimPath": "/usr/bin/nvim",
+	"vim.neovimConfigPath": "~/.config/nvim/init.vim",
 
-    // used keys for vscode shortcuts
-    "vim.handleKeys": {
-        "<C-b>": false,
-        "<C-w>": false,
-        // "<C-d>": false,
-        "<C-f>": false,
-        "<C-h>": false
-    },
-    "vim.insertModeKeyBindings": [
-        {
-            "before": ["j", "j"],
-            "after": ["<Esc>"]
-        }
-    ],
-    "vim.visualModeKeyBindingsNonRecursive": [
-        // easier indent
-        {
-            "before": [">"],
-            "after": [">","g","v"]
-        },
-        {
-            "before": ["<"],
-            "after": ["<", "g","v"]
-        }
-    ],
-    "vim.normalModeKeyBindingsNonRecursive": [
-        // Open this file (Settings)
-        {
-            "before": ["<leader>","."],
-            "commands": ["workbench.action.openSettingsJson"]
-        },
+	// blink on yanked line
+	"vim.highlightedyank.enable": true,
+	"vim.useSystemClipboard": true,
+	"vim.showMarksInGutter": true,
+	// "vim.vimrc.enable": true,
+	// if false, wont be able to see what I'm searching for!
+	"vim.showmodename": true,
+	// In visual mode search for current select with * / #
+	"vim.visualstar": true,
+	"vim.hlsearch": true,
+	// when jumping around (10G) do not jump to start of line
+	"vim.startofline": false,
+	"vim.searchHighlightTextColor": "rgb(0,0,0)",
+	"vim.searchHighlightColor": "rgb(255,255,0)",
 
-        // move visual lines not line numbers
-        {
-            "before": ["j"],
-            "after": ["g", "j"]
-        },
-        {
-            "before": ["k"],
-            "after": ["g", "k"]
-        },
+	// used keys for vscode shortcuts
+	"vim.handleKeys": {
+		"<C-b>": false,
+		"<C-w>": false,
+		// "<C-d>": false,
+		"<C-f>": false,
+		"<C-h>": false
+	},
+	"vim.insertModeKeyBindings": [
+		{
+			"before": ["j", "j"],
+			"after": ["<Esc>"]
+		}
+	],
+	"vim.visualModeKeyBindingsNonRecursive": [
+		// easier indent
+		{
+			"before": [">"],
+			"after": [">","g","v"]
+		},
+		{
+			"before": ["<"],
+			"after": ["<", "g","v"]
+		}
+	],
+	"vim.normalModeKeyBindingsNonRecursive": [
+		// Open this file (Settings)
+		{
+			"before": ["<leader>","."],
+			"commands": ["workbench.action.openSettingsJson"]
+		},
 
-        {
-            "before": [ "-" ],
-            "after": [ "/" ]
-        },
+		// move visual lines not line numbers
+		{
+			"before": ["j"],
+			"after": ["g", "j"]
+		},
+		{
+			"before": ["k"],
+			"after": ["g", "k"]
+		},
 
-        // paste last yanked
-        {
-            "before": ["y","p"],
-            "after": ["\"","0","p"]
-        },
+		{
+			"before": [ "-" ],
+			"after": [ "/" ]
+		},
 
-        // go to definition
-        {
-            "before": ["g","d"],
-            "commands": ["editor.action.revealDefinition"]
-        },
+		// paste last yanked
+		{
+			"before": ["y","p"],
+			"after": ["\"","0","p"]
+		},
 
-        // Open link under cursor
-        {
-            "before": ["g","f"],
-            "commands": ["editor.action.openLink"]
-        },
+		// go to definition
+		{
+			"before": ["g","d"],
+			"commands": ["editor.action.revealDefinition"]
+		},
 
-        // move between errors
-        {
-            "before": ["]","g"],
-            "commands": ["editor.action.marker.next"]
+		// Open link under cursor
+		{
+			"before": ["g","f"],
+			"commands": ["editor.action.openLink"]
+		},
 
-        },
-        {
-            "before": ["[","g"],
-            "commands": ["editor.action.marker.prev"]
+		// move between errors
+		{
+			"before": ["]","g"],
+			"commands": ["editor.action.marker.next"]
 
-        },
+		},
+		{
+			"before": ["[","g"],
+			"commands": ["editor.action.marker.prev"]
 
-        // easier indent
-        {
-            "before": [">"],
-            "commands": ["editor.action.indentLines"]
-        },
-        {
-            "before": ["<"],
-            "commands": ["editor.action.outdentLines"]
-        },
-    ],
+		},
+
+		// easier indent
+		{
+			"before": [">"],
+			"commands": ["editor.action.indentLines"]
+		},
+		{
+			"before": ["<"],
+			"commands": ["editor.action.outdentLines"]
+		},
+	],
 
 
-    "python.languageServer": "Pylance",
-    "debug.javascript.autoAttachFilter": "smart",
-    // "[javascript]": {
-    //     "editor.defaultFormatter": "esbenp.prettier-vscode",
-    //     "editor.formatOnSave": true
-    // },
-    // "[typescript]": {
-    //     "editor.defaultFormatter": "esbenp.prettier-vscode",
-    //     "editor.formatOnSave": true
-    // },
-    "files.associations": {
-        "*.hs": "haskell"
-    },
-    "java.home": "/usr/lib/jvm/java-16-openjdk",
-    "csharp.semanticHighlighting.enabled": true,
-    "projectManager.git.baseFolders": [
-        "~/hsr/epj/api",
-        "~/hsr/epj/documentation",
-        "~/hsr/epj/frontend",
-        "~/hsr/epj/runner",
-        "~/hsr/ds1/ds1"
-    ],
-    "peacock.favoriteColors": [
-        {
-            "name": "Angular Red",
-            "value": "#dd0531"
-        },
-        {
-            "name": "Azure Blue",
-            "value": "#007fff"
-        },
-        {
-            "name": "JavaScript Yellow",
-            "value": "#f9e64f"
-        },
-        {
-            "name": "Mandalorian Blue",
-            "value": "#1857a4"
-        },
-        {
-            "name": "Node Green",
-            "value": "#215732"
-        },
-        {
-            "name": "React Blue",
-            "value": "#61dafb"
-        },
-        {
-            "name": "Something Different",
-            "value": "#832561"
-        },
-        {
-            "name": "Svelte Orange",
-            "value": "#ff3d00"
-        },
-        {
-            "name": "Vue Green",
-            "value": "#42b883"
-        }
-    ],
-    "editor.wordSeparators": "/\\()\"':,.;<>~!@#$%^&*|+=[]{}`?-",
-    "editor.acceptSuggestionOnEnter": "off",
-    "editor.cursorStyle": "line",
-    "editor.lineNumbers": "on",
-    "editor.wordWrap": "off",
-    "window.zoomLevel": 1,
+	"python.languageServer": "Pylance",
+	"debug.javascript.autoAttachFilter": "smart",
+	// "[javascript]": {
+	//     "editor.defaultFormatter": "esbenp.prettier-vscode",
+	//     "editor.formatOnSave": true
+	// },
+	// "[typescript]": {
+	//     "editor.defaultFormatter": "esbenp.prettier-vscode",
+	//     "editor.formatOnSave": true
+	// },
+	"files.associations": {
+		"*.hs": "haskell"
+	},
+	"java.home": "/usr/lib/jvm/java-16-openjdk",
+	"csharp.semanticHighlighting.enabled": true,
+	"projectManager.git.baseFolders": [
+		"~/hsr/epj/api",
+		"~/hsr/epj/documentation",
+		"~/hsr/epj/frontend",
+		"~/hsr/epj/runner",
+		"~/hsr/ds1/ds1"
+	],
+	"peacock.favoriteColors": [
+		{
+			"name": "Angular Red",
+			"value": "#dd0531"
+		},
+		{
+			"name": "Azure Blue",
+			"value": "#007fff"
+		},
+		{
+			"name": "JavaScript Yellow",
+			"value": "#f9e64f"
+		},
+		{
+			"name": "Mandalorian Blue",
+			"value": "#1857a4"
+		},
+		{
+			"name": "Node Green",
+			"value": "#215732"
+		},
+		{
+			"name": "React Blue",
+			"value": "#61dafb"
+		},
+		{
+			"name": "Something Different",
+			"value": "#832561"
+		},
+		{
+			"name": "Svelte Orange",
+			"value": "#ff3d00"
+		},
+		{
+			"name": "Vue Green",
+			"value": "#42b883"
+		}
+	],
+	"editor.wordSeparators": "/\\()\"':,.;<>~!@#$%^&*|+=[]{}`?-",
+	"editor.acceptSuggestionOnEnter": "off",
+	"editor.cursorStyle": "line",
+	"editor.lineNumbers": "on",
+	"editor.wordWrap": "off",
+	"editor.mouseWheelZoom": true,
 
-    // use spaces for indents
-    "editor.detectIndentation": false,
-    "editor.insertSpaces": true,
-    "editor.tabSize": 4,
+	// use spaces for indents
+	"editor.detectIndentation": false,
+	"editor.insertSpaces": true,
+	"editor.tabSize": 4,
 
-    // Design
-    "workbench.productIconTheme": "material-product-icons",
-    "workbench.colorTheme": "Gruvbox Material Light",
-    "workbench.iconTheme": "material-icon-theme",
-    "workbench.colorCustomizations": {
-        "editor.selectionBackground": "#8a8787",
-        "editor.selectionHighlightBackground": "#8a8787"
-    },
+	// Design
+	"workbench.productIconTheme": "material-product-icons",
+	"workbench.colorTheme": "Gruvbox Material Dark",
+	"workbench.iconTheme": "material-icon-theme",
+	"workbench.colorCustomizations": {
+		"editor.selectionBackground": "#8a8787",
+		"editor.selectionHighlightBackground": "#8a8787"
+	},
+	"workbench.editorAssociations": {
+		"*.ipynb": "jupyter.notebook.ipynb"
+	},
 }
