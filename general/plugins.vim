@@ -52,4 +52,7 @@ Plug 'honza/vim-snippets'
 " Highlighting
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
+" vim window navigation for tmux
+Plug 'christoomey/vim-tmux-navigator'
+
 call plug#end()

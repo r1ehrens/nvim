@@ -35,14 +35,13 @@
 	"vim.leader": "space",
 	// Neovim
 	"vim.neovimUseConfigFile": true,
-	"vim.enableNeovim": true,
 	"vim.neovimPath": "/usr/bin/nvim",
+	// "vim.enableNeovim": true,
 	"vim.neovimConfigPath": "~/.config/nvim/init.vim",
 
 	// blink on yanked line
 	"vim.highlightedyank.enable": true,
 	"vim.useSystemClipboard": true,
-	"vim.showMarksInGutter": true,
 	// "vim.vimrc.enable": true,
 	// if false, wont be able to see what I'm searching for!
 	"vim.showmodename": true,
